@@ -1,0 +1,6 @@
+development:
+  adapter: mysql
+  database: jb
+  username: root
+  password: downing
+  host: localhost

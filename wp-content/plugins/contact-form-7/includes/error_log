@@ -1,0 +1,2 @@
+[29-Nov-2013 03:30:43 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home/jobbrand/public_html/wp-content/plugins/contact-form-7/includes/controller.php on line 3
+[07-Mar-2014 06:48:53 America/Chicago] PHP Fatal error:  Call to undefined function add_action() in /home/jobbrand/public_html/wp-content/plugins/contact-form-7/includes/controller.php on line 3
