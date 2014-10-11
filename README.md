@@ -118,3 +118,5 @@ bin/
 * [Setting Up a Local Environment on Linux (Apache)](https://github.com/mhoofman/wordpress-heroku/wiki/Setting-Up-a-Local-Environment-on-Linux-(Apache\))
 * [Setting Up a Local Environment on Mac OS X](https://github.com/mhoofman/wordpress-heroku/wiki/Setting-Up-a-Local-Environment-on-Mac-OS-X)
 * [More...](https://github.com/mhoofman/wordpress-heroku/wiki)
+
+[ ![Codeship Status for karllhughes/JB-Blog](https://www.codeship.io/projects/da1160d0-3388-0132-05ea-568895494e9e/status)](https://www.codeship.io/projects/40618)
