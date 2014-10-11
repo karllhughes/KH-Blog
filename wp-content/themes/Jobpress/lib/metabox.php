@@ -7,24 +7,18 @@ function jb_show_company_meta($job_id) {
         $company_meta = get_term_meta($company->term_id);
     }
     ?><?php if($company_meta['jb_image'][0]) { ?>
-                <a href="<?php echo get_term_link( $company ); ?>" 
-                   title="See More <?php echo $company->name; ?> Entry Level Marketing Jobs on JobBrander" 
+                <a href="<?php echo get_term_link( $company ); ?>"
+                   title="See More <?php echo $company->name; ?> Entry Level Marketing Jobs on JobBrander"
                    ><img src="<?php echo $company_meta['jb_image'][0]; ?>" alt="" /></a>
             <?php } ?>
-    <span class="author"> <?php echo get_the_term_list( $job_id, 'company', '', ' | ' ); ?></span> 
+    <span class="author"> <?php echo get_the_term_list( $job_id, 'company', '', ' | ' ); ?></span>
     | <?php echo get_the_term_list( $job_id, 'city', '', ' | ' ); ?>
     | <span class="date">  <?php the_time('F j, Y'); ?></span>
-<?php 
+<?php
 }
 
 function add_company_meta_data($tag) {
     ?><style>textarea#description {display: none;} </style>
-    <tr class="form-field">
-        <th scope="row" valign="top"><label for="jb_linkedin_login"><?php _e('Get Company Data') ?></label></th>
-        <td>
-            <?php jb_li_auth_link(); ?><br />
-        </td>
-    </tr>
     <tr class="form-field">
         <th scope="row" valign="top"><label for="jb_website"><?php _e('Company Website') ?></label></th>
         <td>
@@ -42,7 +36,7 @@ function add_company_meta_data($tag) {
     <tr class="form-field">
         <th scope="row" valign="top"><label for="jb_description"><?php _e('Company Description') ?></label></th>
         <td>
-            <textarea name="jb_description" id="jb_description" 
+            <textarea name="jb_description" id="jb_description"
             ><?php echo get_term_meta($tag->term_id, 'jb_description', TRUE); ?></textarea><br />
         </td>
     </tr>
@@ -84,16 +78,16 @@ function add_company_meta_data($tag) {
         </td>
     </tr>
 <?php
-    
+
 
 }
 add_action('company_edit_form_fields', 'add_company_meta_data', 10, 1);
 //add_action('company_add_form_fields', 'add_company_meta_data', 10, 1);
- 
+
 function jb_save_company_meta( $term_id ) {
     //require_once('linkedin.php');
     $term = get_term($term_id, 'company');
-    $li_data = jb_li_get_company_info($term->slug);
+    //$li_data = jb_li_get_company_info($term->slug);
     // Save website url
     if ( $_POST['jb_website'] ) {
          update_term_meta($term_id, 'jb_website', $_POST['jb_website']);
@@ -109,7 +103,7 @@ function jb_save_company_meta( $term_id ) {
     // Save tagline
     if ( $_POST['jb_tagline'] ) {
          update_term_meta($term_id, 'jb_tagline', $_POST['jb_tagline']);
-    } 
+    }
     // Save employee count
     if ( $_POST['jb_employee_count'] ) {
          update_term_meta($term_id, 'jb_employee_count', $_POST['jb_employee_count']);
@@ -175,23 +169,23 @@ add_action('admin_menu', 'mytheme_add_box');
 // Add meta box
 function mytheme_add_box() {
 	global $meta_box;
-	
+
 	add_meta_box($meta_box['id'], $meta_box['title'], 'mytheme_show_box', $meta_box['page'], $meta_box['context'], $meta_box['priority']);
 }
 
 // Callback function to show fields in meta box
 function mytheme_show_box() {
 	global $meta_box, $post;
-	
+
 	// Use nonce for verification
 	echo '<input type="hidden" name="mytheme_meta_box_nonce" value="', wp_create_nonce(basename(__FILE__)), '" />';
-	
+
 	echo '<table class="form-table">';
 
 	foreach ($meta_box['fields'] as $field) {
 		// get current post meta data
 		$meta = get_post_meta($post->ID, $field['id'], true);
-		
+
 		echo '<tr>',
 				'<th style="width:20%"><label for="', $field['id'], '">', $field['name'], '</label></th>',
 				'<td>';
@@ -225,7 +219,7 @@ function mytheme_show_box() {
 		echo 	'<td>',
 			'</tr>';
 	}
-	
+
 	echo '</table>';
 }
 
@@ -234,7 +228,7 @@ add_action('save_post', 'mytheme_save_data');
 // Save data from meta box
 function mytheme_save_data($post_id) {
 	global $meta_box;
-	
+
 	// verify nonce
 	if (!wp_verify_nonce($_POST['mytheme_meta_box_nonce'], basename(__FILE__))) {
 		return $post_id;
@@ -253,11 +247,11 @@ function mytheme_save_data($post_id) {
 	} elseif (!current_user_can('edit_post', $post_id)) {
 		return $post_id;
 	}
-	
+
 	foreach ($meta_box['fields'] as $field) {
 		$old = get_post_meta($post_id, $field['id'], true);
 		$new = $_POST[$field['id']];
-		
+
 		if ($new && $new != $old) {
 			update_post_meta($post_id, $field['id'], $new);
 		} elseif ('' == $new && $old) {

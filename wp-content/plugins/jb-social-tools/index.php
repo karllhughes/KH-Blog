@@ -7,10 +7,6 @@ Author: Karl L. Hughes
 Author URI: http://karllhughes.com
 */
 
-$li_api_key = '66wm2k1wfxr4';
-$li_api_secret = 'iLyeMhAtuIVLd330';
-//$li_state = '2Y6FMI57a5';
-
 // Remove profile fields
 if(is_admin()){
   remove_action("admin_color_scheme_picker", "admin_color_scheme_picker");
@@ -34,74 +30,6 @@ function jb_modify_profile_fields( $contactmethods ) {
     return $contactmethods;
 }
 //add_action('init', 'jb_li_redirect');
-
-function jb_twitter_access($cons_key, $cons_secret, $oauth_token, $oauth_token_secret) {
-  $connection = new TwitterOAuth($cons_key, $cons_secret, $oauth_token, $oauth_token_secret);
-  return $connection;
-}
-
-function jb_twitter_fields($tag) {
-    $people = get_term_meta($tag->term_id, 'jb_people', TRUE);
-    if(!$people) { $people = array(); }
-    ?>
-    <tr class="form-field">
-        <th scope="row" valign="top"><label for="jb_people"><?php _e('People') ?></label></th>
-        <td>
-            <input type="text" name="jb_people[0][screenname]" id="jb_people" size="40" value="<?php echo $people[0]['screenname']; ?>"><br />
-            <img src="<?php echo $people[0]['image']; ?>" style="width:15px;height:auto;" /> <?php echo $people[0]['name']; ?> | <?php echo $people[0]['description']; ?><br />
-            <input type="text" name="jb_people[1][screenname]" id="jb_people" size="40" value="<?php echo $people[1]['screenname']; ?>"><br />
-            <img src="<?php echo $people[1]['image']; ?>" style="width:15px;height:auto;" /> <?php echo $people[1]['name']; ?> | <?php echo $people[1]['description']; ?><br />
-            <input type="text" name="jb_people[2][screenname]" id="jb_people" size="40" value="<?php echo $people[2]['screenname']; ?>"><br />
-            <img src="<?php echo $people[2]['image']; ?>" style="width:15px;height:auto;" /> <?php echo $people[2]['name']; ?> | <?php echo $people[2]['description']; ?><br />
-            <input type="text" name="jb_people[3][screenname]" id="jb_people" size="40" value="<?php echo $people[3]['screenname']; ?>"><br />
-            <img src="<?php echo $people[3]['image']; ?>" style="width:15px;height:auto;" /> <?php echo $people[3]['name']; ?> | <?php echo $people[3]['description']; ?><br />
-            <input type="text" name="jb_people[4][screenname]" id="jb_people" size="40" value="<?php echo $people[4]['screenname']; ?>"><br />
-            <img src="<?php echo $people[4]['image']; ?>" style="width:15px;height:auto;" /> <?php echo $people[4]['name']; ?> | <?php echo $people[4]['description']; ?><br />
-            <span class="description">Enter Twitter handles without the "@" sign</span>
-        </td>
-    </tr>
-<?php
-/* Testing:
-    $consumerkey = "rQ0TO3Sf6GXUmMAA3EUTQ";
-    $consumersecret = "gHCTTyaQbSqskoSSY0FkpANtUoqtu3kVQcJkYQAfrk";
-    $accesstoken = "1081219927-gRleb89CL7Jxa39Ho0WQBrsaWFsqR1VmhQq2bDX";
-    $accesstokensecret = "oRPG98rfNY7ydhDjAJzVeanfslDPXuWX5SM9TtXkRc0";
-    $connection = jb_twitter_access($consumerkey, $consumersecret, $accesstoken, $accesstokensecret);
-    $tweeter = $connection->get("https://api.twitter.com/1.1/users/show.json?screen_name=jeffbarr");
-
-    echo '<pre>';
-    print_r($tweeter);
-    echo '</pre>';
- */
-
-}
-add_action('company_edit_form_fields', 'jb_twitter_fields', 11, 1);
-
-function jb_save_tweeters_from_api($term_id) {
-    if ( $_POST['jb_people'] ) {
-        $person = array();
-        $consumerkey = "rQ0TO3Sf6GXUmMAA3EUTQ";
-        $consumersecret = "gHCTTyaQbSqskoSSY0FkpANtUoqtu3kVQcJkYQAfrk";
-        $accesstoken = "1081219927-gRleb89CL7Jxa39Ho0WQBrsaWFsqR1VmhQq2bDX";
-        $accesstokensecret = "oRPG98rfNY7ydhDjAJzVeanfslDPXuWX5SM9TtXkRc0";
-        $connection = jb_twitter_access($consumerkey, $consumersecret, $accesstoken, $accesstokensecret);
-        foreach($_POST['jb_people'] as $twitteruser) {
-            if($twitteruser['screenname']) {
-                $tweeter = $connection->get("https://api.twitter.com/1.1/users/show.json?screen_name=".$twitteruser['screenname']);
-                $person[] = array(
-                    'screenname' => $twitteruser['screenname'],
-                    'twitter_id' => $tweeter->id,
-                    'name' => $tweeter->name,
-                    'image' => $tweeter->profile_image_url,
-                    'description' => $tweeter->description
-                );
-            }
-        }
-        update_term_meta($term_id, 'jb_people', $person);
-    }
-}
-
-add_action ( 'edit_company', 'jb_save_tweeters_from_api');
 
 function jb_li_redirect() {
     //echo "Testing"; exit;
@@ -288,34 +216,6 @@ function jb_li_auth_link() {
         <input type="submit" name="li_form_submit" value="Connect With LinkedIn" class="btn" />
       </form>
       <?php
-    }
-}
-
-function jb_li_get_company_info($name) {
-    global $li_api_key, $li_api_secret;
-    $API_CONFIG = array(
-          'appKey'       => $li_api_key,
-          'appSecret'    => $li_api_secret,
-          'callbackUrl'  => NULL
-    );
-    $OBJ_linkedin = new LinkedIn($API_CONFIG);
-    $OBJ_linkedin->setTokenAccess($_SESSION['oauth']['linkedin']['access']);
-    $OBJ_linkedin->setResponseFormat(LINKEDIN::_RESPONSE_JSON);
-    $_SESSION['oauth']['linkedin']['authorized'] = (isset($_SESSION['oauth']['linkedin']['authorized'])) ? $_SESSION['oauth']['linkedin']['authorized'] : FALSE;
-    if($_SESSION['oauth']['linkedin']['authorized'] === TRUE) {
-        $OBJ_linkedin = new LinkedIn($API_CONFIG);
-        $OBJ_linkedin->setTokenAccess($_SESSION['oauth']['linkedin']['access']);
-        $OBJ_linkedin->setResponseFormat(LINKEDIN::_RESPONSE_JSON);
-
-        // check if the viewer is a member of the test group
-        $response = $OBJ_linkedin->company('universal-name='.$name.':(id,name,website-url,description,industries,square-logo-url,twitter-id,employee-count-range,locations,founded-year,num-followers)');
-        $return = json_decode($response['linkedin']);
-        if(isset($return->errorCode)) {
-            $response = $OBJ_linkedin->searchCompanies(':(companies:(id,name,website-url,description,industries,square-logo-url,twitter-id,employee-count-range,locations,founded-year,num-followers))?keywords='.$name);
-            $return = json_decode($response['linkedin']);
-            $return->multiple = TRUE;
-        }
-        return $return;
     }
 }
 

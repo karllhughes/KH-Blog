@@ -181,7 +181,7 @@ class jb_signup_widget extends WP_Widget {
 			<input class="widefat" id="<?php echo $this->get_field_id( 'count' ); ?>" name="<?php echo $this->get_field_name( 'count' ); ?>" value="<?php echo $instance['count']; ?>" style="width:95%;" />
 		</p>
 
-	
+
 
 	<?php
 	}
@@ -223,9 +223,9 @@ class W2F_Job_Widget extends WP_Widget {
 
 
 			<div class="blog-widget">
-                            
+
                 <ul>
-                	<?php 
+                	<?php
                     $query = new WP_Query();
                     $query->query('post_type=job&posts_per_page='.$count.'&caller_get_posts=1');
                     ?>
@@ -236,23 +236,25 @@ class W2F_Job_Widget extends WP_Widget {
                  <li class="clearfix">
                     <div class="widget-post">
                         <h4 class="widtitle"><a href="<?php the_permalink(); ?>" ><?php the_title(); ?></a></h4>
+                            <?php if($company && $city) { ?>
                             <p class="muted">
-                                <a href="<?php echo get_term_link( $company[0] ); ?>"><?php echo $company[0]->name; ?></a> 
+                                <a href="<?php echo get_term_link( $company[0] ); ?>"><?php echo $company[0]->name; ?></a>
                                 in <a href="<?php echo get_term_link( $city[0] ); ?>"><?php echo $city[0]->name; ?></a>
                             </p>
+                            <?php } ?>
 						<div class="clear"></div>
                     </div>
-                    
+
                 </li>
                     <?php endwhile; endif; ?>
-                    
+
                     <?php wp_reset_query(); ?>
 
                 </ul>
-                
+
             </div><!--blog_widget-->
-			
-			
+
+
 <?php
 		/* After widget (defined by themes). */
 		echo $after_widget;
@@ -294,7 +296,7 @@ class W2F_Job_Widget extends WP_Widget {
 			<input class="widefat" id="<?php echo $this->get_field_id( 'count' ); ?>" name="<?php echo $this->get_field_name( 'count' ); ?>" value="<?php echo $instance['count']; ?>" style="width:95%;" />
 		</p>
 
-	
+
 
 	<?php
 	}
