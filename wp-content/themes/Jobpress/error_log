@@ -1,6 +1,0 @@
-[24-Jul-2013 14:41:45 America/Chicago] PHP Fatal error:  Call to undefined function get_option() in /home/jobbrand/public_html/wp-content/themes/Jobpress/index.php on line 2
-[19-Aug-2013 10:57:41 America/Chicago] PHP Fatal error:  Call to undefined function get_option() in /home/jobbrand/public_html/wp-content/themes/Jobpress/index.php on line 2
-[23-Sep-2013 13:32:31 America/Chicago] PHP Fatal error:  Call to undefined function get_option() in /home/jobbrand/public_html/wp-content/themes/Jobpress/index.php on line 2
-[14-Nov-2013 14:17:11 America/Chicago] PHP Fatal error:  Call to undefined function get_option() in /home/jobbrand/public_html/wp-content/themes/Jobpress/index.php on line 2
-[14-Nov-2013 14:17:13 America/Chicago] PHP Fatal error:  Call to undefined function get_option() in /home/jobbrand/public_html/wp-content/themes/Jobpress/index.php on line 2
-[21-Jan-2014 16:43:47 America/Chicago] PHP Fatal error:  Call to undefined function get_header() in /home/jobbrand/public_html/wp-content/themes/Jobpress/404.php on line 1

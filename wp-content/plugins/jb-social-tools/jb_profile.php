@@ -1,7 +1,0 @@
-<?php
-
-/*
- * Modifies user profiles.
- */
-
-?>
