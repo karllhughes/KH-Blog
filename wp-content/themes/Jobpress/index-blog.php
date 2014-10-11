@@ -16,8 +16,8 @@
         <?php wpe_excerpt('wpe_excerptlength_archive', ''); ?>
     <div class="clearfix"></div>
     </div>
-
     <div class="archive-side">
+        <?php the_post_thumbnail(); ?>
         <?php if ( has_post_thumbnail() ) { ?>
                 <a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title(); ?>">
                 <img class="side-thumb" src="<?php get_image_url(); ?>" alt="" /></a>

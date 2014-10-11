@@ -421,6 +421,10 @@ iframe { max-width: 100%; }
     background-image: url('http://biz.loudoun.gov/images/InfoAdvanced/39/wide%20linkedin%20button.gif');
 
 }
+img.nelioefi {
+  min-width:100px;
+  min-height:100px;
+}
 
 @media (min-width: 1200px) {
     .side-prompt {
