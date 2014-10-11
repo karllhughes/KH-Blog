@@ -1,9 +1,9 @@
 <?php get_header(); ?>
-<div id="content" class="span8"> 
+<div id="content" class="span8">
     <?php jb_show_top_search_bar(); ?>
 <?php if (have_posts()) : $cc = 1; ?>
 <?php while (have_posts()) : the_post(); ?>
-		
+
 <div class="post" id="post-<?php the_ID(); ?>">
     <div class="title">
         <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title(); ?>"><?php the_title(); ?></a></h2>
@@ -22,10 +22,10 @@
                 <a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title(); ?>">
                 <img class="side-thumb" src="<?php get_image_url(); ?>" alt="" /></a>
         <?php } else { ?>
-        
+
         <?php } ?>
     </div>
-        
+
 <div class="clearfix"></div>
 <?php if($cc == 1 || $cc == 5) { ?>
     <div class="google_ad">
