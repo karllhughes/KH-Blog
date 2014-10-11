@@ -34,3 +34,10 @@
 	Line Number: 134
 	---------------------
 	
+	Error number: 8192
+	Error type: Unknown Error type 8192
+	Error Msg: mysql_real_escape_string(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead
+	File name: /Users/Karl/Sites/jb_blog/wp-content/plugins/stop-spammer-registrations-plugin/includes/stop-spam-reg-checks.php
+	Line Number: 134
+	---------------------
+	
