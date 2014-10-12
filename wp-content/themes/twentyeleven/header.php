@@ -71,8 +71,8 @@
 <div id="page" class="hfeed">
 	<header id="branding" role="banner">
 			<hgroup>
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="http://karllhughes.com/blog/wp-content/uploads/2012/03/klh-logo-6001.png" alt="Karl L. Hughes - Community Engagement Engineer" /></a>
-				
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="http://karllhughes.com/wp-content/uploads/2012/03/klh-logo-6001.png" alt="Karl L. Hughes - Community Engagement Engineer" /></a>
+
 			</hgroup>
 
 			<?php

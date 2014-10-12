@@ -16,22 +16,22 @@
 <h1 class="widgetTitle">Or Follow Me Elsewhere:</h1>
 <div class="social-buttons">
 <a href="http://www.facebook.com/KarlLHughes" title="Friend me on Facebook" target="_blank">
-<img src="http://karllhughes.com/blog/wp-content/uploads/2012/03/fb.png" alt="Facebook" />
+<img src="http://karllhughes.com/wp-content/uploads/2012/03/fb.png" alt="Facebook" />
 </a>
 <a href="http://twitter.com/karllhughes" title="Follow me on Twitter" target="_blank">
-<img src="http://karllhughes.com/blog/wp-content/uploads/2012/03/tw.png" alt="Twitter" />
+<img src="http://karllhughes.com/wp-content/uploads/2012/03/tw.png" alt="Twitter" />
 </a>
 <a href="http://www.linkedin.com/in/karllhughes" title="Connect on Linkedin" target="_blank">
-<img src="http://karllhughes.com/blog/wp-content/uploads/2012/03/lin.png" alt="Linkedin" />
+<img src="http://karllhughes.com/wp-content/uploads/2012/03/lin.png" alt="Linkedin" />
 </a>
 <a href="http://contributor.yahoo.com/user/1416913/karl_l_hughes.html" title="Check out my Contributions on Yahoo!" target="_blank">
-<img src="http://karllhughes.com/blog/wp-content/uploads/2012/03/yahoo.png" alt="Yahoo!" />
+<img src="http://karllhughes.com/wp-content/uploads/2012/03/yahoo.png" alt="Yahoo!" />
 </a>
 <a href="http://feedburner.google.com/fb/a/mailverify?uri=KarlLHughes&amp;loc=en_US" title="Subscribe for Email Updates" target="_blank">
-<img src="http://karllhughes.com/blog/wp-content/uploads/2012/03/email.png" alt="Email Feed" />
+<img src="http://karllhughes.com/wp-content/uploads/2012/03/email.png" alt="Email Feed" />
 </a>
 <a href="http://feeds.feedburner.com/KarlLHughes" title="Good ol' RSS" target="_blank">
-<img src="http://karllhughes.com/blog/wp-content/uploads/2012/03/rss.png" alt="RSS Feed" />
+<img src="http://karllhughes.com/wp-content/uploads/2012/03/rss.png" alt="RSS Feed" />
 </a>
 </div>
 		</div>
