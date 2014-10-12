@@ -120,4 +120,4 @@ bin/
 * [More...](https://github.com/mhoofman/wordpress-heroku/wiki)
 
 
-[ ![Codeship Status for karllhughes/JB-Blog](https://www.codeship.io/projects/da1160d0-3388-0132-05ea-568895494e9e/status)](https://www.codeship.io/projects/40618)
+[ ![Codeship Status for karllhughes/KH-Blog](https://www.codeship.io/projects/da1160d0-3388-0132-05ea-568895494e9e/status)](https://www.codeship.io/projects/40618)
