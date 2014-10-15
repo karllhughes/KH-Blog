@@ -5,9 +5,16 @@
 		<h1 class="widgetTitle">About the Author</h1>
 		<div class="textwidget">
 		<?php echo get_avatar( get_the_author_email(), '80' ); ?>
-		<p>Karl Hughes is a software engineer, technology entrepreneur, distance runner, and vegetarian based in Chicago, IL.  Currently, he is a Software Engineer for <a href="http://packbackbooks.com/" title="Packback Books" >Packback</a>.</p>
-<p>He also manages content and marketing for <a href="http://www.jobbrander.com" title="entry level marketing jobs">JobBrander</a>, a website devoted to helping entry level professionals in their <a href="http://www.jobbrander.com/jobs" title="entry level marketing jobs">job hunt</a>.</p>
-<p><a href="<?php echo get_permalink( '6' ); ?>" title="About Karl">About Me</a> | <a href="<?php echo get_permalink( '8' ); ?>" title="Contact Me">Contact Info</a></p>
+		<p>Karl Hughes is a tech entrepreneur, college media fanatic, distance
+		runner, and vegetarian based in Chicago, IL. Currently, he is the Engineering Manager for
+		<a href="http://packbackbooks.com/" target="_blank" title="Packback Books"
+		>Packback</a>.</p>
+		<p>He also manages content strategy for
+		<a href="http://www.jobbrander.com" title="JobBrander - Entry Level Jobs"
+		>JobBrander</a>, a website devoted to helping entry level professionals
+		start their careers, and <a href="http://casualkook.com/" title="Casual Kook"
+		>Casual Kook</a>, his personal cooking and fitness blog.</p>
+		<p><a href="<?php echo get_permalink( '6' ); ?>" title="About Karl">About Me</a> | <a href="<?php echo get_permalink( '8' ); ?>" title="Contact Me">Contact Info</a></p>
 
 <h1 class="widgetTitle">Circle Me for More:</h1>
 <!-- Place this tag where you want the badge to render -->
@@ -23,9 +30,6 @@
 </a>
 <a href="http://www.linkedin.com/in/karllhughes" title="Connect on Linkedin" target="_blank">
 <img src="http://karllhughes.com/wp-content/uploads/2012/03/lin.png" alt="Linkedin" />
-</a>
-<a href="http://contributor.yahoo.com/user/1416913/karl_l_hughes.html" title="Check out my Contributions on Yahoo!" target="_blank">
-<img src="http://karllhughes.com/wp-content/uploads/2012/03/yahoo.png" alt="Yahoo!" />
 </a>
 <a href="http://feedburner.google.com/fb/a/mailverify?uri=KarlLHughes&amp;loc=en_US" title="Subscribe for Email Updates" target="_blank">
 <img src="http://karllhughes.com/wp-content/uploads/2012/03/email.png" alt="Email Feed" />
