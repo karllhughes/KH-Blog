@@ -4,8 +4,8 @@ Contributors: ab-tools
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=donation%40breitschopp.de&item_name=Donation%20for%20Social%20Widgets%20WordPress%20Plug-In&no_shipping=0&no_note=1&tax=0&currency_code=EUR&lc=CA&bn=PP%2dDonationsBF&charset=UTF%2d8
 Tags: social, widgets, widget, Facebook, Twitter, Google, Google+, Google +1, Google Plus, network, simple, German, Deutsch, HTTPS, SSL, button, share, sharing, SEO, bookmarking, bookmarks
 Requires at least: 3.0
-Tested up to: 3.3.2
-Stable tag: 1.3.6
+Tested up to: 3.4.1
+Stable tag: 1.3.7
 
 Simple plug-in that displays the most important social widgets from Facebook, Twitter and Google+ below your posts. Very easy to setup: just activate the plug-in and the social widgets are displayed immediately - no complicated configuration!
 
@@ -42,6 +42,10 @@ If you like this plug-in, please [consider a donation](https://www.paypal.com/cg
 2. The configuration page of the plug-in.
 
 == Changelog ==
+
+= 1.3.7 =
+* Tested with WordPress 3.4.1.
+* *Change:* Turkish translation added thanks to [Selcuk Yahsi](http://www.eniyiwebhosting.com/ "Selcuk Yahsi").
 
 = 1.3.6 =
 * Tested with WordPress 3.3.2.

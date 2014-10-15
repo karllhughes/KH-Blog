@@ -6,7 +6,7 @@ $dosetitlo = '기부 고려 하시기 바랍니다';
 $doseshpeel = '<span style="color:#000080;">AlphaOmega Captcha & Anti-Spam Filter</span>의 창조 자 매우 많이 제공 하는 경우에 당신이 그것을 어떤 방식으로 유용 하 게 찾을이 무료 플러그인의 지속적인된 개발을 지 원하는 데 도움이 작은 기부를 고려할 것 이라고 하는 경우 그것을 이해할 것 이다. 모든 기부 금액을 겸허 하 게 인정 될 것 이다. 감사합니다.';
 $doseinput = '<input type="hidden" name="item_name" value="AlphaOmega Captcha & Anti-Spam Filter에 대 한 기부"><input type="hidden" name="currency_code" value="USD">';
 $dosekubitext = '제발 기부';
-$doseoutput = '<option value="5">&nbsp;$5 &nbsp; &nbsp;</option><option value="10">&nbsp;$10 &nbsp; &nbsp;</option><option value="15">&nbsp;$15 &nbsp; &nbsp;</option><option value="20">&nbsp;$20 &nbsp; &nbsp;</option><option value="25">&nbsp;$25 &nbsp; &nbsp;</option><option value="">&nbsp;다른 &nbsp;</option>';
+$doseoutput = '<option value="5">&nbsp;$5 &nbsp; &nbsp;</option><option value="10">&nbsp;$10 &nbsp; &nbsp;</option><option value="15">&nbsp;$15 &nbsp; &nbsp;</option><option value="20">&nbsp;$20 &nbsp; &nbsp;</option><option value="25">&nbsp;$25 &nbsp; &nbsp;</option><option value="50">&nbsp;$50 &nbsp; &nbsp;</option>';
 $dosepp = 'PayPal에서 처리 하는 기부금';
 $stepglossa = '언어';
 $stepglossaena = '영어';

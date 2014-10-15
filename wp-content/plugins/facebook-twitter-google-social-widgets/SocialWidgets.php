@@ -4,7 +4,7 @@
 Plugin Name: Facebook, Twitter & Google+ Social Widgets
 Plugin URI: http://www.ab-weblog.com/en/wordpress-plug-ins/social-widgets/
 Description: Simple plugin that displays the most important social widgets from Facebook, Twitter and Google+ below your posts. Very easy to setup: just activate the plug-in and the social widgets are displayed immediately - no complicated configuration!
-Version: 1.3.6
+Version: 1.3.7
 Author: Andreas Breitschopp
 Author URI: http://www.ab-weblog.com
 */

@@ -5,17 +5,20 @@ $glossadiobubi = ' ';
 $glossatriabubi = ' ';
 $glossateserabubi = ' ';
 $glossapentebubi = ' ';
-if ( $myoptions['glossa'] === '1' ) {
+$aostichiaoa['glossa'] = '1';
+/*
+if ( $aostichiaoa['glossa'] === '1' ) {
 	$glossaenabubi = ' checked="checked" ';
-} elseif ( $myoptions['glossa'] === '2' ) {
+} elseif ( $aostichiaoa['glossa'] === '2' ) {
 	$glossadiobubi = ' checked="checked" ';
-} elseif ( $myoptions['glossa'] === '3' ) {
+} elseif ( $aostichiaoa['glossa'] === '3' ) {
 	$glossatriabubi = ' checked="checked" ';
-} elseif ( $myoptions['glossa'] === '4' ) {
+} elseif ( $aostichiaoa['glossa'] === '4' ) {
 	$glossateserabubi = ' checked="checked" ';
-} elseif ( $myoptions['glossa'] === '5' ) {
+} elseif ( $aostichiaoa['glossa'] === '5' ) {
 	$glossapentebubi = ' checked="checked" ';
 }
+*/
 $tichoenakubi = ' ';
 $tichodiokubi = ' ';
 $tichotriakubi = ' ';
@@ -35,51 +38,51 @@ $tichodecaexikubi = ' ';
 $tichodecaeftakubi = ' ';
 $tichodecaochtokubi = ' ';
 $tichodecaeneakubi = ' ';
-if ( $myoptions['titichonadixis'] === '1' ) {
+if ( $aostichiaoa['titichonadixis'] === '1' ) {
 	$tichoenakubi = ' checked="checked" ';
-} elseif ( $myoptions['titichonadixis'] === '2' ) {
+} elseif ( $aostichiaoa['titichonadixis'] === '2' ) {
 	$tichodiokubi = ' checked="checked" ';
-} elseif ( $myoptions['titichonadixis'] === '3' ) {
+} elseif ( $aostichiaoa['titichonadixis'] === '3' ) {
 	$tichotriakubi = ' checked="checked" ';
-} elseif ( $myoptions['titichonadixis'] === '4' ) {
+} elseif ( $aostichiaoa['titichonadixis'] === '4' ) {
 	$tichoteserakubi = ' checked="checked" ';
-} elseif ( $myoptions['titichonadixis'] === '5' ) {
+} elseif ( $aostichiaoa['titichonadixis'] === '5' ) {
 	$tichopentekubi = ' checked="checked" ';
-} elseif ( $myoptions['titichonadixis'] === '6' ) {
+} elseif ( $aostichiaoa['titichonadixis'] === '6' ) {
 	$tichoexikubi = ' checked="checked" ';
-} elseif ( $myoptions['titichonadixis'] === '7' ) {
+} elseif ( $aostichiaoa['titichonadixis'] === '7' ) {
 	$tichoeftakubi = ' checked="checked" ';
-} elseif ( $myoptions['titichonadixis'] === '8' ) {
+} elseif ( $aostichiaoa['titichonadixis'] === '8' ) {
 	$tichoochtokubi = ' checked="checked" ';
-} elseif ( $myoptions['titichonadixis'] === '9' ) {
+} elseif ( $aostichiaoa['titichonadixis'] === '9' ) {
 	$tichoeneakubi = ' checked="checked" ';
-} elseif ( $myoptions['titichonadixis'] === '10' ) {
+} elseif ( $aostichiaoa['titichonadixis'] === '10' ) {
 	$tichodecakubi = ' checked="checked" ';
-} elseif ( $myoptions['titichonadixis'] === '11' ) {
+} elseif ( $aostichiaoa['titichonadixis'] === '11' ) {
 	$tichoendecakubi = ' checked="checked" ';
-} elseif ( $myoptions['titichonadixis'] === '12' ) {
+} elseif ( $aostichiaoa['titichonadixis'] === '12' ) {
 	$tichododecakubi = ' checked="checked" ';
-} elseif ( $myoptions['titichonadixis'] === '13' ) {
+} elseif ( $aostichiaoa['titichonadixis'] === '13' ) {
 	$tichodecatriakubi = ' checked="checked" ';
-} elseif ( $myoptions['titichonadixis'] === '14' ) {
+} elseif ( $aostichiaoa['titichonadixis'] === '14' ) {
 	$tichodecateserakubi = ' checked="checked" ';
-} elseif ( $myoptions['titichonadixis'] === '15' ) {
+} elseif ( $aostichiaoa['titichonadixis'] === '15' ) {
 	$tichodecapentekubi = ' checked="checked" ';
-} elseif ( $myoptions['titichonadixis'] === '16' ) {
+} elseif ( $aostichiaoa['titichonadixis'] === '16' ) {
 	$tichodecaexikubi = ' checked="checked" ';
-} elseif ( $myoptions['titichonadixis'] === '17' ) {
+} elseif ( $aostichiaoa['titichonadixis'] === '17' ) {
 	$tichodecaeftakubi = ' checked="checked" ';
-} elseif ( $myoptions['titichonadixis'] === '18' ) {
+} elseif ( $aostichiaoa['titichonadixis'] === '18' ) {
 	$tichodecaochtokubi = ' checked="checked" ';
-} elseif ( $myoptions['titichonadixis'] === '19' ) {
+} elseif ( $aostichiaoa['titichonadixis'] === '19' ) {
 	$tichodecaeneakubi = ' checked="checked" ';
 }
 $tominimatichotopos = ' ';
 $tostichiotichotopos = ' ';
-if ( $myoptions['dixeminimaticho'] === '1' ) {
+if ( $aostichiaoa['dixeminimaticho'] === '1' ) {
 	$tominimatichotopos = ' checked="checked" ';
 }
-if ( $myoptions['dixestichioticho'] === '1' ) {
+if ( $aostichiaoa['dixestichioticho'] === '1' ) {
 	$tostichiotichotopos = ' checked="checked" ';
 }
 $tichotoposepano = ' ';
@@ -87,53 +90,66 @@ $tichotoposmesi = ' ';
 $tichotoposkato = ' ';
 $stichiotoposepano = ' ';
 $stichiotoposkato = ' ';
-if ( $myoptions['minimatichotopos'] === '1' ) {
+if ( $aostichiaoa['minimatichotopos'] === '1' ) {
 	$tichotoposepano = ' checked="checked" ';
-} elseif ( $myoptions['minimatichotopos'] === '2' ) {
+} elseif ( $aostichiaoa['minimatichotopos'] === '2' ) {
 	$tichotoposmesi = ' checked="checked" ';
-} elseif ( $myoptions['minimatichotopos'] === '3' ) {
+} elseif ( $aostichiaoa['minimatichotopos'] === '3' ) {
 	$tichotoposkato = ' checked="checked" ';
 }
-if ( $myoptions['stichiotichotopos'] === '2' ) {
+if ( $aostichiaoa['stichiotichotopos'] === '2' ) {
 	$stichiotoposkato = ' checked="checked" ';
 }
 $stragiseonomakubi = ' ';
 $stragisediefthinsikubi = ' ';
 $stragisehitaftafpikubi = ' ';
 $stragiseminimakubi = ' ';
-if ( $myoptions['stragiseonoma'] === '1' ) {
+if ( $aostichiaoa['stragiseonoma'] === '1' ) {
 	$stragiseonomakubi = ' checked="checked" ';
 }
-if ( $myoptions['stragisediefthinsi'] === '1' ) {
+if ( $aostichiaoa['stragisediefthinsi'] === '1' ) {
 	$stragisediefthinsikubi = ' checked="checked" ';
 }
-if ( $myoptions['stragisehataftafpi'] === '1' ) {
+if ( $aostichiaoa['stragisehataftafpi'] === '1' ) {
 	$stragisehitaftafpikubi = ' checked="checked" ';
 }
-if ( $myoptions['stragiseminima'] === '1' ) {
+if ( $aostichiaoa['stragiseminima'] === '1' ) {
 	$stragiseminimakubi = ' checked="checked" ';
 }
-if ( $myoptions['stragisekabosaminima'] === '0' ) {
-	$tutostragismaparakalo = $myoptions['stragiseklisto'];
+if ( $aostichiaoa['stragisekabosaminima'] === '0' ) {
+	$tutostragismaparakalo = $aostichiaoa['stragiseklisto'];
 } else {
-	if ( $myoptions['stragisemedikomas'] === '1' ) {
-		$tutostragismaparakalo = str_replace('####', PHP_EOL, $myoptions['dikomasstragisekolona']);
+	if ( $aostichiaoa['stragisemedikomas'] === '1' ) {
+		$tutostragismaparakalo = str_replace('####', PHP_EOL, $aostichiaoa['dikomasstragisekolona']);
 	} else {
-		$tutostragismaparakalo = str_replace("\\", "", str_replace('####', PHP_EOL, $myoptions['dikosustragisekolona']));
+		$tutostragismaparakalo = str_replace("\\", "", str_replace('####', PHP_EOL, $aostichiaoa['dikosustragisekolona']));
 	}
 }
-$dikomasustragismaparakalokubipatisma = str_replace("####", "\\n", $myoptions['dikomasstragisekolona']);
-if ( $myoptions['dikosustragisekolona'] === '' ) {
-	$dixedikosustragismakolonakubipatisma =  $myoptions['dikosustragisekolonadenechitipotaminima'];				
+$dikomasustragismaparakalokubipatisma = str_replace("####", "\\n", $aostichiaoa['dikomasstragisekolona']);
+if ( $aostichiaoa['dikosustragisekolona'] === '' ) {
+	$dixedikosustragismakolonakubipatisma =  $aostichiaoa['dikosustragisekolonadenechitipotaminima'];				
 } else {
-	$dixedikosustragismakolonakubipatisma =  str_replace("\"", "&quot;", str_replace('####', "\\n", $myoptions['dikosustragisekolona']));
+	$dixedikosustragismakolonakubipatisma =  str_replace("\"", "&quot;", str_replace('####', "\\n", $aostichiaoa['dikosustragisekolona']));
 }
-if ( $myoptions['nadixisdikomaskakofaniminimaapantisi'] === '1' ) {
-	$kakofaniminimaapantasititlo = $myoptions['kakofaniminimaapantasititlo'];
-	$kakofaniminimaapantasiminima = $myoptions['kakofaniminimaapantasiminima'];
+if ( $aostichiaoa['nadixisdikomaskakofaniminimaapantisi'] === '1' ) {
+	$kakofaniminimaapantasititlo = $aostichiaoa['kakofaniminimaapantasititlo'];
+	$kakofaniminimaapantasiminima = $aostichiaoa['kakofaniminimaapantasiminima'];
 } else {
-	$kakofaniminimaapantasititlo = stripslashes($myoptions['dikosukakofaniminimaapantasititlo']);
-	$kakofaniminimaapantasiminima = stripslashes($myoptions['dikosukakofaniminimaapantasiminima']);
+	$kakofaniminimaapantasititlo = stripslashes($aostichiaoa['dikosukakofaniminimaapantasititlo']);
+	$kakofaniminimaapantasiminima = stripslashes($aostichiaoa['dikosukakofaniminimaapantasiminima']);
 }
+if ( $aostichiaoa['stepstragisekolonatoraiine'] !== 'None' ) { 
+
+	$stepstragiseklisestragismasvisekoubi = '';
+	$stepstragiseklisestragisma = $aostichiaoa['stragiseklistopre'];
+
+} else {
+
+	$stepstragiseklisestragismasvisekoubi = $aostichiaoa['stepstragiseklisestragismasvisekoubi'];
+
+}
+
+$sideroonomaklisto = explode(' ', trim($aostichiaoa['michanionoma']));
+$sideroonoma = $sideroonomaklisto[0];
 
 ?>

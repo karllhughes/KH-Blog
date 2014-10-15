@@ -27,9 +27,11 @@
 	$leximegathos = 12;
 	$lexiarhaio = getcwd() . '/grafistilo.ttf';
 	$apotelisma = imagettftext($edoicona, $leximegathos, mt_rand(-4,4), $enarxix, mt_rand($leximegathos,$iconaipsos-5), $lexihroma, $lexiarhaio, $iconafrasi);
+	ob_clean();
 	header("Content-Type:image/png");
 	header("Content-Disposition:inline ; filename=daimage.png");
 	imagepng($edoicona);
 	imagedestroy($edoicona);
+	ob_end_flush();
 
 ?>

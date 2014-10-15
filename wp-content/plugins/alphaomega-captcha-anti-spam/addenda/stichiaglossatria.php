@@ -6,7 +6,7 @@ $dosetitlo = 'Εξετάστε το ενδεχόμενο δωρίζετε';
 $doseshpeel = 'Οι δημιουργοί του <span style="color:#000080;">AlphaOmega Captcha & Anti-Spam Filter</span> εκτιμούσα πολύ αν θα εξετάζατε το παρέχει μια μικρή δωρεά για να υποστηρίξουμε τη συνεχή ανάπτυξη δωρεάν αυτό το plugin, εάν το βρείτε χρήσιμο με οποιονδήποτε τρόπο. Κάθε ποσό το οποίο δωρεά θα εκτιμήσουν ταπεινά. Ευχαριστούμε.';
 $doseinput = '<input type="hidden" name="country" value="GR" ><input type="hidden" name="item_name" value="Δωρεά για AlphaOmega Captcha & Anti-Spam Filter"><input type="hidden" name="currency_code" value="EUR">';
 $dosekubitext = 'Παρακαλώ δωρεά';
-$doseoutput = '<option value="5">&nbsp;€5 &nbsp; &nbsp;</option><option value="10">&nbsp;€10 &nbsp; &nbsp;</option><option value="15">&nbsp;€15 &nbsp;&nbsp;</option><option value="20">&nbsp;€20 &nbsp; &nbsp;</option><option value="25">&nbsp;€25 &nbsp; &nbsp;</option><option value="">&nbsp;Άλλα &nbsp;</option>';
+$doseoutput = '<option value="5">&nbsp;€5 &nbsp; &nbsp;</option><option value="10">&nbsp;€10 &nbsp; &nbsp;</option><option value="15">&nbsp;€15 &nbsp;&nbsp;</option><option value="20">&nbsp;€20 &nbsp; &nbsp;</option><option value="25">&nbsp;€25 &nbsp; &nbsp;</option><option value="50">&nbsp;€50 &nbsp; &nbsp;</option>';
 $dosepp = 'Δωρεές που υποβάλλονται σε επεξεργασία από το PayPal';
 $stepglossa = 'Γλώσσα';
 $stepglossaena = 'Αγγλικά';

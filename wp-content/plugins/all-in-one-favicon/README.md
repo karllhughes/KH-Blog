@@ -1,24 +1,24 @@
-=== All In One Favicon ===
+# All In One Favicon #
 Contributors: techotronic  
 Donate link: http://www.techotronic.de/donate/  
 Tags: theme, favicon, admin, blog, wordpress, image, images, graphic, graphics, icon, iphone, multisite  
 Requires at least: 2.8  
 Tested up to: 3.3  
-Stable tag: 4.0
+Stable tag: 4.3
 
-Easily add a Favicon to your site and the WordPress admin pages. Complete with upload functionality. Supports all three Favicon types (ico,png,gif).
+Easily add a Favicon to your site and the WordPress admin pages. Complete with upload functionality. Supports all three Favicon types (ico,png,gif).  
 
-== Description ==
+## Description ##
 
 All In One Favicon adds favicons to your site and your admin pages.  
-You can either use favicons you already uploaded or use the builtin upload mechanism to upload a favicon to your WordPress installation.
+You can either use favicons you already uploaded or use the builtin upload mechanism to upload a favicon to your WordPress installation.  
 
 All three favicon types are supported - .ico, .png and .gif (may be animated)  
-Also, Apple Touch Icons are supported.
+Also, Apple Touch Icons are supported.  
 
-See [plugin page](http://www.techotronic.de/plugins/all-in-one-favicon/) for more information, a "first steps" guide and screenshots.
+See [plugin page](http://www.techotronic.de/plugins/all-in-one-favicon/) for more information, a "first steps" guide and screenshots.  
 
-**Localization**
+**Localization**  
 
 * Bahasa Indonesia (`id_ID`) by [EKO](http://movableid.com/)
 * Czech (`cs_CZ`) by [Neteyes](http://www.neteyes.cz)
@@ -29,26 +29,28 @@ See [plugin page](http://www.techotronic.de/plugins/all-in-one-favicon/) for mor
 * German (`de_DE`) by [Arne Franken](http://www.techotronic.de/)
 * Italian (`it_IT`) by [Valerio Vendrame](http://www.valeriovendrame.it/)
 * Polish (`pl_PL`) by [Piotr Czarnecki](http://www.facebook.com/piniu69/)
+* Portuguese (`pt_PT`) by [Miguel Ângelo Patricio](http://www.miguelpatricio.com/)
 * Serbian (`sr_RS`) by [Balkanboy Media team](http://dralvaro.com/)
 * Simplified Chinese (`zh_CN`) by [Tunghsiao Liu](http://sparanoid.com/)
 * Spanish (`es_ES`) by [Juan Pablo Pérez Manes](mailto:jppm30@gmail.com)
 * Slovak (`sk_SK`) by [Viliam Brozman](http://www.brozman.sk/blog)
 * Swedish (`sv_SE`) by [Christian Nilsson](http://www.theindiaexperience.se/)
+* Turkish (`tr_TR`) by [Ömer Faruk Karabulut](http://ramerta.com)
 
 Is your native language missing?  
 Translating the plugin is easy if you understand english and are fluent in another language.  
-I described in the [FAQ](http://wordpress.org/extend/plugins/all-in-one-favicon/faq/) how the translation works.
+I described in the [FAQ](http://wordpress.org/extend/plugins/all-in-one-favicon/faq/) how the translation works.  
 
-== Installation ==
+## Installation ##
 
-###Updgrading From A Previous Version###
+###Upgrading From A Previous Version###
 
-To upgrade from a previous version of this plugin, use the built in update feature of WordPress or copy the files on top of the current installation.
+To upgrade from a previous version of this plugin, use the built in update feature of WordPress or copy the files on top of the current installation.  
 
 ###Installing The Plugin###
 
 Either use the built in plugin installation feature of WordPress, or extract all files from the ZIP file, making sure to keep the file structure intact, and then upload it to `/wp-content/plugins/`.  
-Then just visit your admin area and activate the plugin. That's it!
+Then just visit your admin area and activate the plugin. That's it!  
 
 ###Configuring The Plugin###
 
@@ -56,7 +58,7 @@ Go to the settings page and and upload your Favicon(s) or add the path/URL to al
 
 **See Also:** ["Installing Plugins" article on the WP Codex](http://codex.wordpress.org/Managing_Plugins#Installing_Plugins)
 
-== Frequently Asked Questions ==
+## Frequently Asked Questions ##
 
 * When I try to upload a favicon, I get the error: "File type does not meet security guidelines. Try another.”  
   You are probably using a WordPress Multisite installation? Then you'll need to add "ico" to the allowed file types property on the "Super Admin -> Options" page.
@@ -70,7 +72,7 @@ Go to the settings page and and upload your Favicon(s) or add the path/URL to al
   Would you like to help? Translating the plugin is easy if you understand English and are fluent in another language.
 
 * How do I translate All In One Favicon?  
-  Take a look at the WordPress site and identify [your langyage code](http://codex.wordpress.org/WordPress_in_Your_Language):  
+  Take a look at the WordPress site and identify [your language code](http://codex.wordpress.org/WordPress_in_Your_Language):  
   e.g. the language code for German is `de_DE`.
 
   1. download [POEdit](http://www.poedit.net/)
@@ -89,12 +91,37 @@ Go to the settings page and and upload your Favicon(s) or add the path/URL to al
   Feel free to open a thread at [the All In One Favicon WordPress.org forum](http://wordpress.org/tags/all-in-one-favicon?forum_id=10#postform).  
   I'll include new FAQs in every new version.
 
-== Screenshots ==
+## Screenshots ##
 
 [Please visit my site for screenshots](http://www.techotronic.de/plugins/all-in-one-favicon/).
 
-== Changelog ==
-= 4.0 (2012-03-14) =
+## Changelog ##
+### 4.3 (2012-02-21) ###
+* BUGFIX: File upload will now work in certain browsers, e.g. Internet Explorer and Safari 5
+* NEW: Portuguese translation by Miguel Ângelo Patricio
+* CHANGE: Turkish translation updated by Ömer Faruk Karabulut
+
+### 4.2.1 (2012-01-21) ###
+* BUGFIX: fix errormessage that _() wouldn't work in some installations
+
+### 4.2 (2012-01-21) ###
+* BUGFIX: Copy and paste of Favicon URLs now working correctly
+* NEW: Turkish translation by Selçuk Yahşi
+* CHANGE: Eddy Ernesto Ríos updated the Spanish translation
+* CHANGE: deleting all plugin settings now also deleted uploaded favicons
+* CHANGE: option "delete favicon" is only displayed if a favicon was already uploaded
+* CHANGE: add warning that JavaScript is needed for uploading favicons
+
+### 4.1 (2012-11-17) ###
+* NEW: Hebrew translation by Ahrale
+* CHANGE: favicon URLs can be copy'n'pasted again
+* CHANGE: upload form only accepts files of type "image" now.
+* CHANGE: use `plugins_url` to make links HTTPS aware
+* CHANGE: Viliam Brozman updated the Slovak translation
+* CHANGE: Tunghsiao Liu updated the Simplified Chinese translation
+* BUGFIX: switch declaration of 'NAME' and 'TEXTDOMAIN'
+
+### 4.0 (2012-03-14) ###
 * NEW: Simplified Chinese translation by Tunghsiao Liu
 * NEW: Czech translation by Neteyes
 * NEW: French translation by Christophe Guilloux
@@ -109,10 +136,10 @@ Go to the settings page and and upload your Favicon(s) or add the path/URL to al
 * CHANGE: fixed link to Apple Touch Icon howto
 * CHANGE: Major refactoring, hopefully speeds up frontend and backend rendering
 
-= 3.1 (2011-01-16) =
+### 3.1 (2011-01-16) ###
 * CHANGE: made plugin compatible to PHP4
 
-= 3.0 (2011-01-15) =
+### 3.0 (2011-01-15) ###
 * NEW: Added option to remove link from meta box.
 * BUGFIX: Fixed a bug where the plugin would break WordPress 3.0 with Multisite enabled.
 * NEW: Added latest donations and top donations to settings page
@@ -123,12 +150,12 @@ Go to the settings page and and upload your Favicon(s) or add the path/URL to al
 * NEW: Italian translation by Valerio Vendrame
 * NEW: Spanish translation by Juan Pablo Pérez Manes
 
-= 2.1 (2010-06-06) =
+### 2.1 (2010-06-06) ###
 * BUGFIX: Fixing bug where favicons would not be displayed in certain cases.
 
-= 2.0 (2010-06-03) =
+### 2.0 (2010-06-03) ###
 * NEW: now supports Apple Touch Icons for backend and frontend
 * NEW: more links to websites containing information.
 
-= 1.0 (2010-05-06) =
+### 1.0 (2010-05-06) ###
 * NEW: Initial release.

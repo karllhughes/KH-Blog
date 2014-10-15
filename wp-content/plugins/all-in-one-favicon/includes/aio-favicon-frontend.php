@@ -8,6 +8,9 @@
  *
  * Object that handles all actions in the WordPress frontend
  */
+
+require_once (dirname (__FILE__) . '/favicon-render-helper.php');
+
 class AioFaviconFrontend {
 
   /**
@@ -24,64 +27,31 @@ class AioFaviconFrontend {
   function AioFaviconFrontend($aioFaviconSettings) {
 
     $this->aioFaviconSettings = $aioFaviconSettings;
-
-    add_action('wp_head', array(& $this, 'aioFaviconRenderBlogHeader'));
-
-    //only add link to meta box
-    if (isset($this->aioFaviconSettings['removeLinkFromMetaBox']) && !$this->aioFaviconSettings['removeLinkFromMetaBox']) {
-      add_action('wp_meta', array(& $this, 'renderMetaLink'));
-    }
-
+    $this->faviconRenderHelper = new FaviconRenderHelper($this->aioFaviconSettings,AIOFAVICON_FRONTEND);
   }
 
   // AioFaviconFrontend()
 
   /**
-   * Renders Favicon
+   * Initialize
    *
-   * @since 1.0
+   * @since 4.0
    * @access public
    * @author Arne Franken
+   *
+   * @return void
    */
-  //public function aioFaviconRenderBlogHeader() {
-  function aioFaviconRenderBlogHeader() {
-    if (!empty($this->aioFaviconSettings)) {
-      foreach ((array)$this->aioFaviconSettings as $type => $url) {
-        if (!empty($url)) {
-          if (preg_match('/frontend/i', $type)) {
-            if (preg_match('/ico/i', $type)) {
-?>
-<link rel="shortcut icon" href="<?php echo htmlspecialchars($url)?>"/><?php
+  //public function init() {
+  function init() {
+    add_action('wp_head', array(& $this->faviconRenderHelper, 'renderFavicons'));
 
-            }
-            else if (preg_match('/gif/i', $type)) {
-?>
-<link rel="icon" href="<?php echo htmlspecialchars($url)?>" type="image/gif"/><?php
-
-            }
-            else if (preg_match('/png/i', $type)) {
-?>
-<link rel="icon" href="<?php echo htmlspecialchars($url)?>" type="image/png"/><?php
-
-            }
-            else if (preg_match('/apple/i', $type)) {
-              if ((isset($this->aioFaviconSettings['removeReflectiveShine']) && !$this->aioFaviconSettings['removeReflectiveShine'])) {
-?>
-<link rel="apple-touch-icon" href="<?php echo htmlspecialchars($url)?>"/><?php
-              }
-              else {
-?>
-<link rel="apple-touch-icon-precomposed" href="<?php echo htmlspecialchars($url)?>"/><?php
-              }
-
-            }
-          }
-        }
-      }
+    //only add link to meta box
+    if (isset($this->aioFaviconSettings['removeLinkFromMetaBox']) && !$this->aioFaviconSettings['removeLinkFromMetaBox']) {
+      add_action('wp_meta', array(& $this, 'renderMetaLink'));
     }
   }
 
-  // aioFaviconRenderBlogHeader()
+  //init()
 
   /**
    * Renders plugin link in Meta widget
@@ -96,7 +66,7 @@ class AioFaviconFrontend {
   <li><?php _e('Using', AIOFAVICON_TEXTDOMAIN);?>
     <a href="http://www.techotronic.de/plugins/all-in-one-favicon/" target="_blank" title="<?php echo AIOFAVICON_NAME ?>"><?php echo AIOFAVICON_NAME ?></a>
   </li>
-  <?php
+<?php
   }
 
   // renderMetaLink()

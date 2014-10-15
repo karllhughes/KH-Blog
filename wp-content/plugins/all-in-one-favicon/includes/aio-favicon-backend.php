@@ -8,6 +8,9 @@
  *
  * Object that handles all actions in the WordPress backend
  */
+
+require_once (dirname (__FILE__) . '/favicon-render-helper.php');
+
 class AioFaviconBackend {
 
   /**
@@ -20,17 +23,40 @@ class AioFaviconBackend {
    *
    * @param array $aioFaviconSettings user settings
    * @param array $aioFaviconDefaultSettings default plugin settings
+   * @param AIOFaviconDonationLoader $donationLoader the donationloader
+   * @param array $faviconFrontendMap mapping of favicon types to translatable Strings
+   * @param array $faviconBackendMap mapping of favicon types to translatable Strings
    *
    * @return void
    */
   //public static function AioFaviconBackend($aioFaviconSettings) {
-  function AioFaviconBackend($aioFaviconSettings, $aioFaviconDefaultSettings, $donationLoader) {
+  function AioFaviconBackend($aioFaviconSettings, $aioFaviconDefaultSettings, $donationLoader,
+                              $faviconFrontendMap, $faviconBackendMap) {
 
     $this->aioFaviconSettings = $aioFaviconSettings;
     $this->aioFaviconDefaultSettings = $aioFaviconDefaultSettings;
     $this->donationLoader = $donationLoader;
+    $this->faviconRenderHelper = new FaviconRenderHelper($this->aioFaviconSettings,AIOFAVICON_BACKEND);
+    $this->faviconFrontendMap = $faviconFrontendMap;
+    $this->faviconBackendMap = $faviconBackendMap;
+    $this->faviconMap = array_merge($faviconFrontendMap,$faviconBackendMap);
+  }
 
-    add_action('admin_head', array(& $this, 'aioFaviconRenderAdminHeader'));
+  // AioFaviconBackend()
+
+
+  /**
+   * Initialize
+   *
+   * @since 4.0
+   * @access public
+   * @author Arne Franken
+   *
+   * @return void
+   */
+  //public function init() {
+  function init() {
+    add_action('admin_head', array(& $this->faviconRenderHelper, 'renderFavicons'));
 
     // add options page
     add_action('admin_menu', array(& $this, 'registerAdminMenu'));
@@ -40,12 +66,12 @@ class AioFaviconBackend {
 
     //only load JavaScript if we are on this plugin's settingspage
     if (isset($_GET['page']) && $_GET['page'] == AIOFAVICON_PLUGIN_BASENAME) {
-      add_action('admin_print_scripts', array(& $donationLoader, 'registerDonationJavaScript'));
-      add_action('admin_print_scripts', array(& $this, 'registerAdminScripts'));
+      add_action('admin_enqueue_scripts', array(& $this->donationLoader, 'registerDonationJavaScript'));
+      add_action('admin_enqueue_scripts', array(& $this, 'registerAdminScripts'));
     }
   }
 
-  // AioFaviconBackend()
+  //init()
 
 
   /**
@@ -61,6 +87,7 @@ class AioFaviconBackend {
   //public function registerAdminScripts() {
   function registerAdminScripts() {
     $backendJavaScriptArray = array();
+
     if (!empty($this->aioFaviconSettings)) {
       foreach ((array)$this->aioFaviconSettings as $type => $url) {
         if (!empty($url)) {
@@ -76,55 +103,6 @@ class AioFaviconBackend {
   }
 
   // registerAdminScripts()
-
-  /**
-   * Renders Favicon
-   *
-   * @since 1.0
-   * @access public
-   * @author Arne Franken
-   *
-   * @return void
-   */
-  //public function aioFaviconRenderAdminHeader() {
-  function aioFaviconRenderAdminHeader() {
-    if (!empty($this->aioFaviconSettings)) {
-      foreach ((array)$this->aioFaviconSettings as $type => $url) {
-        if (!empty($url)) {
-          if (preg_match('/backend/i', $type)) {
-            if (preg_match('/ico/i', $type)) {
-?>
-<link rel="shortcut icon" href="<?php echo htmlspecialchars($url)?>"/><?php
-
-            }
-            else if (preg_match('/gif/i', $type)) {
-?>
-<link rel="icon" href="<?php echo htmlspecialchars($url)?>" type="image/gif"/><?php
-
-            }
-            else if (preg_match('/png/i', $type)) {
-?>
-<link rel="icon" href="<?php echo htmlspecialchars($url)?>" type="image/png"/><?php
-
-            }
-            else if (preg_match('/apple/i', $type)) {
-              if ((isset($this->aioFaviconSettings['removeReflectiveShine']) && !$this->aioFaviconSettings['removeReflectiveShine'])) {
-?>
-<link rel="apple-touch-icon" href="<?php echo htmlspecialchars($url)?>"/><?php
-              }
-              else {
-?>
-<link rel="apple-touch-icon-precomposed" href="<?php echo htmlspecialchars($url)?>"/><?php
-              }
-
-            }
-          }
-        }
-      }
-    }
-  }
-
-  // aioFaviconRenderAdminHeader()
 
   /**
    * Render Settings page
@@ -211,11 +189,28 @@ class AioFaviconBackend {
     //cross check the given referer for nonce set in settings form
     check_admin_referer('aio-favicon-settings-form');
 
-    // Create the settings array by merging the user's settings and the defaults
+    // get new settings from POST
     $usersettings = $_POST[AIOFAVICON_SETTINGSNAME];
+
+    // if URL was copy / pasted into form, fields named "*-text", but must be saved without "-text" suffix.
+    foreach ($usersettings as $settingsName => $settingsValue) {
+      if(preg_match('/(.*)-text/i',$settingsName, $matches)) {
+        if (count($matches) > 1) {
+          $match = $matches[1];
+          if(!empty($settingsValue)) {
+            $usersettings[$match] = $settingsValue;
+          }
+        }
+        //delete "*-text" from incoming array
+        unset($usersettings[$settingsName]);
+      }
+    }
+
+    // Create the settings array by merging the user's settings and the defaults
     $defaultArray = $this->aioFaviconDefaultSettings;
     $this->aioFaviconSettings = wp_parse_args($usersettings, wp_parse_args((array)get_option(AIOFAVICON_SETTINGSNAME), $defaultArray));
 
+    //don't show link in meta box by default any more.
     if (!isset($usersettings['removeLinkFromMetaBox'])) {
       $this->aioFaviconSettings['removeLinkFromMetaBox'] = false;
     }
@@ -223,9 +218,11 @@ class AioFaviconBackend {
     // handle file upload
     $overrides = array('action' => 'aioFaviconUpdateSettings');
     foreach ($_FILES as $icoName => $icoArray) {
-      $file = wp_handle_upload($_FILES[$icoName], $overrides);
-      if (isset($file['url'])) {
-        $this->aioFaviconSettings[$icoName] = $file['url'];
+      if(!empty($icoArray['name'])) {
+        $file = wp_handle_upload($_FILES[$icoName], $overrides);
+        if (isset($file['url'])) {
+          $this->aioFaviconSettings[$icoName] = $file['url'];
+        }
       }
     }
 
@@ -238,8 +235,6 @@ class AioFaviconBackend {
         }
       }
     }
-
-    //$debugger->dieWithVariable($_POST);
 
     $this->updateSettingsInDatabase();
     $referrer = str_replace(array('&aioFaviconUpdateSettings', '&aioFaviconDeleteSettings'), '', $_POST['_wp_http_referer']);
@@ -265,8 +260,15 @@ class AioFaviconBackend {
     if (current_user_can('manage_options') && isset($_POST['delete_settings-true'])) {
       //cross check the given referer for nonce set in delete settings form
       check_admin_referer('aio-favicon-delete_settings-form');
+
+      foreach($this->faviconMap as $key => $value) {
+        $this->deleteFile($key);
+      }
+
       $this->deleteSettingsFromDatabase();
-    } else {
+
+    }
+    else {
       wp_die(sprintf(__('Did not delete %1$s settings. Either you dont have the nececssary rights or you didnt check the checkbox.', AIOFAVICON_TEXTDOMAIN), AIOFAVICON_NAME));
     }
     //clean up referrer
@@ -317,6 +319,7 @@ class AioFaviconBackend {
       $uploads = wp_upload_dir();
       $regex = '#' . $uploads['baseurl'] . '/(.*)#i';
       preg_match($regex, $url, $relativePath);
+
       if (count($relativePath) > 1) {
         $pathToFile = $uploads['basedir'] . '/' . $relativePath[1];
         @ unlink($pathToFile);
@@ -393,7 +396,7 @@ class AioFaviconBackend {
    *
    * @param string $url
    *
-   * @return the response
+   * @return string the response
    */
   //private function getRemoteContent($url) {
   function getRemoteContent($url) {
@@ -403,11 +406,13 @@ class AioFaviconBackend {
 
       $response = wp_remote_request($url, $options);
 
-      if (is_wp_error($response))
+      if (is_wp_error($response)) {
         return false;
+      }
 
-      if (200 != wp_remote_retrieve_response_code($response))
+      if (200 != wp_remote_retrieve_response_code($response)) {
         return false;
+      }
 
       return wp_remote_retrieve_body($response);
     }
@@ -431,16 +436,20 @@ class AioFaviconBackend {
     $currentLocation = "http";
     $currentLocation .= ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') ? "s" : "") . "://";
     $currentLocation .= $_SERVER['SERVER_NAME'];
+
     if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') {
+
       if ($_SERVER['SERVER_PORT'] != '443') {
         $currentLocation .= ":" . $_SERVER['SERVER_PORT'];
       }
     }
     else {
+
       if ($_SERVER['SERVER_PORT'] != '80') {
         $currentLocation .= ":" . $_SERVER['SERVER_PORT'];
       }
     }
+
     $currentLocation .= $_SERVER['REQUEST_URI'];
     echo $currentLocation;
   }

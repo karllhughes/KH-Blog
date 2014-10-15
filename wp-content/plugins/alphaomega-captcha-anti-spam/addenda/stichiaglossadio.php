@@ -6,7 +6,7 @@ $dosetitlo = '寄付をご検討下さい';
 $doseshpeel = '任意の方法で便利な場合は、この無料のプラグインの開発継続をサポートするために小額の寄付を提供することを検討する場合 <span style="color:#000080;">AlphaOmega Captcha & Anti-Spam Filter</span> クリエイター非常に感謝しました。任意寄付金額を謙虚に高く評価されます。ありがとう。';
 $doseinput = '<input type="hidden" name="country" value="JP" ><input type="hidden" name="item_name" value="AlphaOmega Captcha & Anti-Spam Filterの寄付"><input type="hidden" name="currency_code" value="JPY">';
 $dosekubitext = '寄付をして下さい';
-$doseoutput = '<option value="500">&nbsp;500円 &nbsp; &nbsp;</option><option value="1000">&nbsp;1000円 &nbsp; &nbsp;</option><option value="1500">&nbsp;1500円 &nbsp; &nbsp;</option><option value="2000">&nbsp;2000円 &nbsp; &nbsp;</option><option value="2500">&nbsp;2500円 &nbsp; &nbsp;</option><option value="">&nbsp;他 &nbsp;</option>';
+$doseoutput = '<option value="500">&nbsp;500円 &nbsp; &nbsp;</option><option value="1000">&nbsp;1000円 &nbsp; &nbsp;</option><option value="1500">&nbsp;1500円 &nbsp; &nbsp;</option><option value="2000">&nbsp;2000円 &nbsp; &nbsp;</option><option value="2500">&nbsp;2500円 &nbsp; &nbsp;</option><option value="5000">&nbsp;5000円 &nbsp; &nbsp;</option>';
 $dosepp = 'PayPal によって処理の寄付';
 $stepglossa = '言語';
 $stepglossaena = '英語';

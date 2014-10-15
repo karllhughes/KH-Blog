@@ -6,7 +6,7 @@ $dosetitlo = '請考慮捐贈';
 $doseshpeel = '<span style="color:#000080;">AlphaOmega Captcha & Anti-Spam Filter</span> 的建立者將會非常感激如果你會考慮提供小小的捐贈，以説明支援這個免費的外掛程式的持續的發展，如果您發現它以任何方式很有用。任何捐款金額將謙遜地表示讚賞。謝謝。';
 $doseinput = '<input type="hidden" name="item_name" value="AlphaOmega Captcha & Anti-Spam Filter捐贈"><input type="hidden" name="currency_code" value="USD">';
 $dosekubitext = '請捐贈';
-$doseoutput = '<option value="5">&nbsp;$5 &nbsp; &nbsp;</option><option value="10">&nbsp;$10 &nbsp; &nbsp;</option><option value="15">&nbsp;$15 &nbsp;&nbsp;</option><option value="20">&nbsp;$20 &nbsp; &nbsp;</option><option value="25">&nbsp;$25 &nbsp; &nbsp;</option><option value="">&nbsp;其他 &nbsp;</option>';
+$doseoutput = '<option value="5">&nbsp;$5 &nbsp; &nbsp;</option><option value="10">&nbsp;$10 &nbsp; &nbsp;</option><option value="15">&nbsp;$15 &nbsp;&nbsp;</option><option value="20">&nbsp;$20 &nbsp; &nbsp;</option><option value="25">&nbsp;$25 &nbsp; &nbsp;</option><option value="50">&nbsp;$50 &nbsp; &nbsp;</option>';
 $dosepp = '捐款由 PayPal 進行處理';
 $stepglossa = '語言';
 $stepglossaena = '英語';

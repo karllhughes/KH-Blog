@@ -3,8 +3,8 @@ Contributors: techotronic
 Donate link: http://www.techotronic.de/donate/  
 Tags: theme, favicon, admin, blog, wordpress, image, images, graphic, graphics, icon, iphone, multisite  
 Requires at least: 2.8  
-Tested up to: 3.3  
-Stable tag: 4.0
+Tested up to: 3.4
+Stable tag: 4.3
 
 Easily add a Favicon to your site and the WordPress admin pages. Complete with upload functionality. Supports all three Favicon types (ico,png,gif).
 
@@ -27,13 +27,16 @@ See [plugin page](http://www.techotronic.de/plugins/all-in-one-favicon/) for mor
 * English (`en_EN`) by [Arne Franken](http://www.techotronic.de/)
 * French (`fr_FR`) by Christophe Guilloux
 * German (`de_DE`) by [Arne Franken](http://www.techotronic.de/)
+* Hebrew (`he_IL`) by [Ahrale](http://www.atar4u.com)
 * Italian (`it_IT`) by [Valerio Vendrame](http://www.valeriovendrame.it/)
 * Polish (`pl_PL`) by [Piotr Czarnecki](http://www.facebook.com/piniu69/)
+* Portuguese (`pt_PT`) by [Miguel Ângelo Patricio](http://www.miguelpatricio.com/)
 * Serbian (`sr_RS`) by [Balkanboy Media team](http://dralvaro.com/)
 * Simplified Chinese (`zh_CN`) by [Tunghsiao Liu](http://sparanoid.com/)
-* Spanish (`es_ES`) by [Juan Pablo Pérez Manes](mailto:jppm30@gmail.com)
+* Spanish (`es_ES`) by Eddy Ernesto Ríos
 * Slovak (`sk_SK`) by [Viliam Brozman](http://www.brozman.sk/blog)
 * Swedish (`sv_SE`) by [Christian Nilsson](http://www.theindiaexperience.se/)
+* Turkish (`tr_TR`) by [Ömer Faruk Karabulut](http://ramerta.com)
 
 Is your native language missing?  
 Translating the plugin is easy if you understand english and are fluent in another language.  
@@ -41,7 +44,7 @@ I described in the [FAQ](http://wordpress.org/extend/plugins/all-in-one-favicon/
 
 == Installation ==
 
-###Updgrading From A Previous Version###
+###Upgrading From A Previous Version###
 
 To upgrade from a previous version of this plugin, use the built in update feature of WordPress or copy the files on top of the current installation.
 
@@ -58,9 +61,6 @@ Go to the settings page and and upload your Favicon(s) or add the path/URL to al
 
 == Frequently Asked Questions ==
 
-* When I try to upload a favicon, I get the error: "File type does not meet security guidelines. Try another.”  
-  You are probably using a WordPress Multisite installation? Then you'll need to add "ico" to the allowed file types property on the "Super Admin -> Options" page.
-
 * Internet Explorer: Why does my favicon show up in the backend but not in the frontend or not at all?  
   Internet Explorer behaves weird, not only when favicons are concerned. You may take a look at this  
   [FAQ](http://jeffcode.blogspot.com/2007/12/why-doesnt-favicon-for-my-site-appear.html).
@@ -70,7 +70,7 @@ Go to the settings page and and upload your Favicon(s) or add the path/URL to al
   Would you like to help? Translating the plugin is easy if you understand English and are fluent in another language.
 
 * How do I translate All In One Favicon?  
-  Take a look at the WordPress site and identify [your langyage code](http://codex.wordpress.org/WordPress_in_Your_Language):  
+  Take a look at the WordPress site and identify [your language code](http://codex.wordpress.org/WordPress_in_Your_Language):  
   e.g. the language code for German is `de_DE`.
 
   1. download [POEdit](http://www.poedit.net/)
@@ -94,6 +94,31 @@ Go to the settings page and and upload your Favicon(s) or add the path/URL to al
 [Please visit my site for screenshots](http://www.techotronic.de/plugins/all-in-one-favicon/).
 
 == Changelog ==
+= 4.3 (2012-02-21) =
+* BUGFIX: File upload will now work in certain browsers, e.g. Internet Explorer and Safari 5
+* NEW: Portuguese translation by Miguel Ângelo Patricio
+* CHANGE: Turkish translation updated by Ömer Faruk Karabulut
+
+= 4.2.1 (2012-01-21) =
+* BUGFIX: fix errormessage that _() wouldn't work in some installations
+
+= 4.2 (2012-01-21) =
+* BUGFIX: Copy and paste of Favicon URLs now working correctly
+* NEW: Turkish translation by Selçuk Yahşi
+* CHANGE: Eddy Ernesto Ríos updated the Spanish translation
+* CHANGE: deleting all plugin settings now also deleted uploaded favicons
+* CHANGE: option "delete favicon" is only displayed if a favicon was already uploaded
+* CHANGE: add warning that JavaScript is needed for uploading favicons
+
+= 4.1 (2012-11-17) =
+* NEW: Hebrew translation by Ahrale
+* CHANGE: favicon URLs can be copy'n'pasted again
+* CHANGE: upload form only accepts files of type "image" now.
+* CHANGE: use `plugins_url` to make links HTTPS aware
+* CHANGE: Viliam Brozman updated the Slovak translation
+* CHANGE: Tunghsiao Liu updated the Simplified Chinese translation
+* BUGFIX: switch declaration of 'NAME' and 'TEXTDOMAIN'
+
 = 4.0 (2012-03-14) =
 * NEW: Simplified Chinese translation by Tunghsiao Liu
 * NEW: Czech translation by Neteyes
