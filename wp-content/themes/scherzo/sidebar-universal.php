@@ -37,6 +37,9 @@
 <a href="http://feeds.feedburner.com/KarlLHughes" title="Good ol' RSS" target="_blank">
 <img src="http://karllhughes.com/wp-content/uploads/2012/03/rss.png" alt="RSS Feed" />
 </a>
+<a href="https://github.com/karllhughes/" title="View my Code on Github" target="_blank">
+<img src="http://i.imgur.com/DgRRLq3.png" alt="Github" />
+</a>
 </div>
 		</div>
 	</section>
