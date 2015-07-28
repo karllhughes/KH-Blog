@@ -38,8 +38,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
 
-/* 1. RESET AND HTML5 SETTINGS 
-------------------------------*/ 
+/* 1. RESET AND HTML5 SETTINGS
+------------------------------*/
 
 body,
 ul,
@@ -95,7 +95,7 @@ body {
 	max-width: 51em;
 	_width: 51em; /* For IE's awesome CSS rendering */
 }
-	
+
 
 /* 3. UNIVERSAL AND REUSABLE
 ----------------------------*/
@@ -303,7 +303,7 @@ a.header-link {
 .entry-content h6,
 .entry-content dt {
 	font-size: 1em;
-	padding: 1em 0 0.5em 0;	
+	padding: 1em 0 0.5em 0;
 }
 
 
@@ -480,7 +480,7 @@ p.wp-caption-text {
 	padding: 0 0 1.5em 0;
 	border-top: 1px dotted #AAA;
 	margin-top: -1px;
-}	
+}
 
 .comment-heading,
 #reply-title {
@@ -572,7 +572,7 @@ p.wp-caption-text {
 	font-family: georgia, 'liberation serif', palatino, serif;
 	max-width: 98%; /* Make sure width - border never exceeds container width */
 }
-	
+
 #author,
 #email,
 #url {
@@ -684,6 +684,12 @@ ul.sub-menu li {
 	padding-bottom: 1.385em;
 }
 
+.sidebar img.avatar {
+	float: right;
+	width: 70px;
+	height: auto;
+	margin-left: 5px;
+}
 
 /* 6.1 Specific widget styles
 -----------------------------*/
@@ -950,19 +956,19 @@ dd {
 
 @media screen and (min-width: 600px) {
 
-	/*	
-		
-		We set this first query to make sure that 
+	/*
+
+		We set this first query to make sure that
 		our measure isn't *too* wide on some narrow
 		width devices.
 
 	*/
-	
+
 	#wrapper {
 		width: 522px;
 		margin-top: 1em;
 	}
-	
+
 }
 
 @media screen and (min-width: 850px) {
@@ -970,7 +976,7 @@ dd {
 	#wrapper {
 		width: 51em;
 	}
-	
+
 	#content {
 		clear: both;
 		width: 32.625em;
@@ -987,19 +993,19 @@ dd {
 		background-color: #FFF;
 		border-top: none;
 	}
-	
+
 	#site-title {
 		padding-top: 1.5em;
 	}
-	
+
 	.hentry {
 		padding-bottom: 3em;
 	}
-	
+
 	.entry-title {
 		margin-bottom: 0.571em;
 	}
-	
+
 	.entry-content h1,
 	.entry-content h2,
 	.entry-content h3,
@@ -1009,18 +1015,18 @@ dd {
 	.entry-content dt {
 		font-weight: normal;
 	}
-	
+
 	.single .entry-summary p {
 		padding: 0.75em;
 		background-color: #EFEFEF;
 		border: 1px solid #AFAFAF;
 	}
-	
+
 	.comment-heading,
 	#reply-title {
 		font-weight: normal;
 	}
-	
+
 	#author,
 	#email,
 	#url,
@@ -1028,12 +1034,12 @@ dd {
 		width: 32.375em;
 		max-width: 32.375em;
 	}
-	
+
 	#author,
 	#email,
 	#url {
 		width: 14.375em;
 		max-width: 14.375em;
 	}
-	
+
 } /* End @media width query */

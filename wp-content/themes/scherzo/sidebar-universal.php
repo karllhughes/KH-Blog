@@ -2,25 +2,27 @@
 
 	<aside id="universal" class="sidebar" role="complementary">
 	<section class="widgetContainer widget_text">
-		<h1 class="widgetTitle">About the Author</h1>
+		<h2 class="widgetTitle">About Me</h2>
 		<div class="textwidget">
-		<?php echo get_avatar( get_the_author_email(), '80' ); ?>
-		<p>Karl Hughes is a tech entrepreneur, college media fanatic, distance
-		runner, and vegetarian based in Chicago, IL. Currently, he is the Engineering Manager for
-		<a href="http://packbackbooks.com/" target="_blank" title="Packback Books"
-		>Packback</a>.</p>
-		<p>He also manages content strategy for
-		<a href="http://www.jobbrander.com" title="JobBrander - Entry Level Jobs"
-		>JobBrander</a>, a website devoted to helping entry level professionals
-		start their careers, and <a href="http://casualkook.com/" title="Casual Kook"
-		>Casual Kook</a>, his personal cooking and fitness blog.</p>
-		<p><a href="<?php echo get_permalink( '6' ); ?>" title="About Karl">About Me</a> | <a href="<?php echo get_permalink( '8' ); ?>" title="Contact Me">Contact Info</a></p>
+		<img src="http://i.imgur.com/GsDIIQz.jpg" class="avatar" />
+		<p>
+			I'm a Technology Entrepreneur & Engineer, and I'm
+			currently building software at
+			<a href="http://packbackbooks.com/" target="_blank" title="Packback Books">Packback</a>
+			and running
+			<a href="http://www.jobbrander.com" target="_blank" title="JobBrander">JobBrander</a>.
+		</p>
+		<p>
+			Here on my blog I post about managing software teams,
+			working at a startup, and some of the more interesting projects
+			I'm working on.
+		</p>
+		<p><a href="<?php echo get_permalink( '6' ); ?>" title="About">Read More</a>
+			| <a href="<?php echo get_permalink( '8' ); ?>" title="Contact Me">Contact</a>
+			| <a href="https://drive.google.com/open?id=0B2SL8f3YPEJPQjZadGRJLVMtQ3M" title="Karl L. Hughes Resume">Resume</a>
+		</p>
 
-<h1 class="widgetTitle">Circle Me for More:</h1>
-<!-- Place this tag where you want the badge to render -->
-<g:plus href="https://plus.google.com/101080316492181821858" width="230" height="69" ></g:plus>
-
-<h1 class="widgetTitle">Or Follow Me Elsewhere:</h1>
+<h2 class="widgetTitle">Or Follow Me Elsewhere:</h2>
 <div class="social-buttons">
 <a href="http://www.facebook.com/KarlLHughes" title="Friend me on Facebook" target="_blank">
 <img src="http://karllhughes.com/wp-content/uploads/2012/03/fb.png" alt="Facebook" />
@@ -31,14 +33,14 @@
 <a href="http://www.linkedin.com/in/karllhughes" title="Connect on Linkedin" target="_blank">
 <img src="http://karllhughes.com/wp-content/uploads/2012/03/lin.png" alt="Linkedin" />
 </a>
+<a href="https://github.com/karllhughes/" title="View my Code on Github" target="_blank">
+<img src="http://i.imgur.com/DgRRLq3.png" alt="Github" />
+</a>
 <a href="http://feedburner.google.com/fb/a/mailverify?uri=KarlLHughes&amp;loc=en_US" title="Subscribe for Email Updates" target="_blank">
 <img src="http://karllhughes.com/wp-content/uploads/2012/03/email.png" alt="Email Feed" />
 </a>
 <a href="http://feeds.feedburner.com/KarlLHughes" title="Good ol' RSS" target="_blank">
 <img src="http://karllhughes.com/wp-content/uploads/2012/03/rss.png" alt="RSS Feed" />
-</a>
-<a href="https://github.com/karllhughes/" title="View my Code on Github" target="_blank">
-<img src="http://i.imgur.com/DgRRLq3.png" alt="Github" />
 </a>
 </div>
 		</div>
