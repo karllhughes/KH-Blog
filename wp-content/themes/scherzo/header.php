@@ -62,7 +62,7 @@ s.parentNode.insertBefore(po, s);
 
 
 <a class="header-link" href="<?php echo home_url(); ?>" rel="index" title="Go to home page">
-<img src="http://www.karllhughes.com/wp-content/uploads/2012/07/logo650.png" alt="Karl L. Hughes - Technology Entrepreneur in Online Publishing" style="max-width:90%;height:auto;margin:10px 5%;" />
+<img src="http://www.karllhughes.com/wp-content/uploads/2012/07/logo650.png" alt="<?php bloginfo('name'); ?> - <?php bloginfo('description'); ?>" style="max-width:90%;height:auto;margin:10px 5%;" />
 </a>
 
 					</div> <!-- end #branding -->
