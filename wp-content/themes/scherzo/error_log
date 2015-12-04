@@ -1,6 +1,0 @@
-[07-Aug-2012 05:51:27] PHP Fatal error:  Call to undefined function  get_header() in /home/karllhug/public_html/blog/wp-content/themes/scherzo/index.php on line 1
-[09-Jan-2014 16:05:08 America/Chicago] PHP Fatal error:  Call to undefined function get_header() in /home/karllhug/public_html/blog/wp-content/themes/scherzo/index.php on line 1
-[09-Jan-2014 16:05:08 America/Chicago] PHP Fatal error:  Call to undefined function get_header() in /home/karllhug/public_html/blog/wp-content/themes/scherzo/index.php on line 1
-[22-Jan-2014 12:51:39 America/Chicago] PHP Fatal error:  Call to undefined function get_header() in /home/karllhug/public_html/blog/wp-content/themes/scherzo/404.php on line 1
-[10-Sep-2014 09:50:02 America/Chicago] PHP Fatal error:  Call to undefined function get_header() in /home/karllhug/public_html/blog/wp-content/themes/scherzo/index.php on line 1
-[10-Sep-2014 09:58:02 America/Chicago] PHP Fatal error:  Call to undefined function get_header() in /home/karllhug/public_html/blog/wp-content/themes/scherzo/index.php on line 1
