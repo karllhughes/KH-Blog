@@ -103,7 +103,7 @@ function titeblog_header_scripts()
     }
 }
 
-// Load HTML5 Blank conditional scripts
+// Load conditional scripts
 function titeblog_conditional_scripts()
 {
     if (is_page('pagenamehere')) {
@@ -112,17 +112,14 @@ function titeblog_conditional_scripts()
     }
 }
 
-// Load HTML5 Blank styles
+// Load styles
 function titeblog_styles()
 {
-    wp_register_style('normalize', get_template_directory_uri() . '/normalize.css', array(), '1.0', 'all');
-    wp_enqueue_style('normalize'); // Enqueue it!
-
-    wp_register_style('titeblog', get_template_directory_uri() . '/style.css', array(), '1.0', 'all');
+	wp_register_style('titeblog', get_template_directory_uri() . '/style.css', array(), '1.0', 'all');
     wp_enqueue_style('titeblog'); // Enqueue it!
 }
 
-// Register HTML5 Blank Navigation
+// Register Navigation
 function register_html5_menu()
 {
     register_nav_menus(array( // Using array to specify more menus if needed

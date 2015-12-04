@@ -1,0 +1,12 @@
+{
+  "name": "titeblog",
+  "version": "1.0.0",
+  "description": "Based on the [HTML5 Blank Theme](http://html5blank.com).",
+  "main": "index.php",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-sass": "^2.1.0"
+  }
+}
