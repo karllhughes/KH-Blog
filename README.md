@@ -15,6 +15,7 @@ This site can be found at [karllhughes.com](http://www.karllhughes.com), and inc
 ## Technical Details
 - Wordpress powered backend using a MySql database
 - Hosted on Heroku (for now)
+- [HTML5Blank](html5blank.com) boilerplate WordPress theme
 
 ## Features I'm Considering Adding
 - Subscribe...but who would want to be on my email list?
