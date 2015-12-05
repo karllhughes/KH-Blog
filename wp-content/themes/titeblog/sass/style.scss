@@ -13,6 +13,8 @@
 @import 'normalize';
 */
 @import 'default';
-@import 'custom';
+@import 'settings';
 @import '../node_modules/foundation-sites/scss/foundation/components/grid';
 @import '../node_modules/foundation-sites/scss/foundation/components/type';
+@import 'social_foundicons';
+@import 'custom';

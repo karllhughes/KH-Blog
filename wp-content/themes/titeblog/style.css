@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 	Theme Name: Tite Blog
 	Theme URI: http://www.karllhughes.com
@@ -65,24 +66,6 @@ input:focus {
   outline: 0;
   border: 1px solid #04A4CC; }
 
-/*------------------------------------*    STRUCTURE
-\*------------------------------------*/
-/* wrapper */
-.wrapper {
-  max-width: 1280px;
-  width: 95%;
-  margin: 0 auto;
-  position: relative; }
-
-/* header */
-/* logo */
-/* nav */
-/* sidebar */
-/* footer */
-/*------------------------------------*    PAGES
-\*------------------------------------*/
-/*------------------------------------*    IMAGES
-\*------------------------------------*/
 /*------------------------------------*	TYPOGRAPHY
 \*------------------------------------*/
 @font-face {
@@ -1290,11 +1273,11 @@ td {
 
 /* Default Link Styles */
 a {
-  color: #008CBA;
+  color: #ff9b00;
   line-height: inherit;
   text-decoration: none; }
   a:hover, a:focus {
-    color: #0078a0; }
+    color: #db8500; }
   a img {
     border: none; }
 
@@ -1563,3 +1546,139 @@ blockquote p {
   h2,
   h3 {
     page-break-after: avoid; } }
+
+/* font-face */
+@font-face {
+  font-family: "SocialFoundicons";
+  src: url("./fonts/social_foundicons.eot");
+  src: url("./fonts/social_foundicons.eot?#iefix") format("embedded-opentype"), url("./fonts/social_foundicons.woff") format("woff"), url("./fonts/social_foundicons.ttf") format("truetype"), url("./fonts/social_foundicons.svg#SocialFoundicons") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/* global foundicon styles */
+[class*="foundicon-"] {
+  display: inline;
+  width: auto;
+  height: auto;
+  line-height: inherit;
+  vertical-align: baseline;
+  background-image: none;
+  background-position: 0 0;
+  background-repeat: repeat; }
+
+[class*="foundicon-"]:before {
+  font-family: "SocialFoundicons";
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit; }
+
+/* icons */
+.foundicon-thumb-up:before {
+  content: ""; }
+
+.foundicon-thumb-down:before {
+  content: ""; }
+
+.foundicon-rss:before {
+  content: ""; }
+
+.foundicon-facebook:before {
+  content: ""; }
+
+.foundicon-twitter:before {
+  content: ""; }
+
+.foundicon-pinterest:before {
+  content: ""; }
+
+.foundicon-github:before {
+  content: ""; }
+
+.foundicon-path:before {
+  content: ""; }
+
+.foundicon-linkedin:before {
+  content: ""; }
+
+.foundicon-dribbble:before {
+  content: ""; }
+
+.foundicon-stumble-upon:before {
+  content: ""; }
+
+.foundicon-behance:before {
+  content: ""; }
+
+.foundicon-reddit:before {
+  content: ""; }
+
+.foundicon-google-plus:before {
+  content: ""; }
+
+.foundicon-youtube:before {
+  content: ""; }
+
+.foundicon-vimeo:before {
+  content: ""; }
+
+.foundicon-flickr:before {
+  content: ""; }
+
+.foundicon-slideshare:before {
+  content: ""; }
+
+.foundicon-picassa:before {
+  content: ""; }
+
+.foundicon-skype:before {
+  content: ""; }
+
+.foundicon-steam:before {
+  content: ""; }
+
+.foundicon-instagram:before {
+  content: ""; }
+
+.foundicon-foursquare:before {
+  content: ""; }
+
+.foundicon-delicious:before {
+  content: ""; }
+
+.foundicon-chat:before {
+  content: ""; }
+
+.foundicon-torso:before {
+  content: ""; }
+
+.foundicon-tumblr:before {
+  content: ""; }
+
+.foundicon-video-chat:before {
+  content: ""; }
+
+.foundicon-digg:before {
+  content: ""; }
+
+.foundicon-wordpress:before {
+  content: ""; }
+
+/* Header styles */
+header {
+  padding-top: 1.2em;
+  padding-bottom: 1.2em;
+  text-align: center;
+  background-color: #EEEEEE; }
+  header .logo {
+    font-size: 2em;
+    font-weight: bold; }
+  header .subtitle {
+    font-size: 1.2em; }
+  header .social {
+    font-size: 1.4em;
+    line-height: 2em; }
+    header .social a {
+      margin: 0 .1em;
+      color: #666666; }
+      header .social a :hover {
+        color: #222222; }
