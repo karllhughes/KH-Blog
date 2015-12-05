@@ -1,0 +1,68 @@
+/* Header styles */
+header.row {
+    width: 100%;
+    max-width: 100%;
+    padding-top: 1.2em;
+    padding-bottom: 1.2em;
+    text-align: center;
+    background-color: $smoke;
+    
+    .logo {
+        font-size: 2em;
+        font-weight: bold;
+    }
+    .subtitle {
+    font-size: 1.2em;
+    }
+    .social {
+        font-size: 1.4em;
+        line-height: 2em;
+        a {
+            margin: 0 .1em;
+            color: $steel;
+            :hover {
+                color: $jet;
+            }
+        }
+    }
+    
+}
+
+header.row, main.row, aside.sidebar {
+    margin-bottom: 1em;
+}
+
+/* Typography */
+h1.understated {
+    font-size: 1.125rem;
+    line-height: 1.4;
+    color: $aluminum;
+}
+
+.date {
+    color: $aluminum;
+    font-size: .875rem;
+}
+
+/* Pagination */
+ul.page-numbers {
+    @extend .pagination;
+    font-family: $font-family-sans-serif;
+}
+
+/* Sidebar */
+.widget_pages ul {
+    @extend .side-nav;
+    padding: 0;
+}
+
+.widget_text {
+    p {
+        font-size: .875rem;
+        line-height: 1.5;
+        font-family: $font-family-sans-serif;
+    }
+    img.avatar {
+        float: right;
+    }
+}

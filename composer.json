@@ -1,0 +1,10 @@
+{
+    "name": "karllhughes/kh-blog",
+    "description": "Personal blog for Karl L Hughes",
+    "keywords": ["wordpress", "blog", "karllhughes"],
+    "license": "MIT",
+    "type": "project",
+    "require": {
+        "php": "~7.0.0RC6"
+    }
+}
