@@ -31,3 +31,8 @@ header.row {
 header.row, main.row, aside.sidebar {
     margin-bottom: 1em;
 }
+
+ul.page-numbers {
+    @extend .pagination;
+    font-family: $font-family-sans-serif;
+}
