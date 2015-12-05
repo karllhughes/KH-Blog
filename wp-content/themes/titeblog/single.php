@@ -23,9 +23,7 @@
 
 			<?php the_tags( __( 'Tags: ', 'titeblog' ), ', ', '<br>'); // Separated by commas with a line break at the end ?>
 
-			<p><?php _e( 'Categorised in: ', 'titeblog' ); the_category(', '); // Separated by commas ?></p>
-
-			<?php edit_post_link(); // Always handy to have Edit Post Links available ?>
+			<p><?php _e( 'Categorized in: ', 'titeblog' ); the_category(', '); // Separated by commas ?></p>
 
 			<?php comments_template(); ?>
 

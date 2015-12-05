@@ -1664,21 +1664,26 @@ blockquote p {
   content: ""; }
 
 /* Header styles */
-header {
+header.row {
+  width: 100%;
+  max-width: 100%;
   padding-top: 1.2em;
   padding-bottom: 1.2em;
   text-align: center;
   background-color: #EEEEEE; }
-  header .logo {
+  header.row .logo {
     font-size: 2em;
     font-weight: bold; }
-  header .subtitle {
+  header.row .subtitle {
     font-size: 1.2em; }
-  header .social {
+  header.row .social {
     font-size: 1.4em;
     line-height: 2em; }
-    header .social a {
+    header.row .social a {
       margin: 0 .1em;
       color: #666666; }
-      header .social a :hover {
+      header.row .social a :hover {
         color: #222222; }
+
+header.row, main.row, aside.sidebar {
+  margin-bottom: 1em; }

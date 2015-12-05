@@ -1,6 +1,7 @@
 /* Header styles */
-
-header {
+header.row {
+    width: 100%;
+    max-width: 100%;
     padding-top: 1.2em;
     padding-bottom: 1.2em;
     text-align: center;
@@ -25,4 +26,8 @@ header {
         }
     }
     
+}
+
+header.row, main.row, aside.sidebar {
+    margin-bottom: 1em;
 }

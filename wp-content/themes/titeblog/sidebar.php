@@ -9,11 +9,12 @@
 		<?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('widget-area-2')) ?>
 	</div>
 
-	<?php get_template_part('searchform'); ?>
-	
+	<?php if( current_user_can('administrator')) { ?>
 	<small>
-		Queries on this page: <?php echo get_num_queries(); ?>
+		Queries on this page: <?php echo get_num_queries(); ?><br/>
+		<?php edit_post_link(); ?>
 	</small>
+	<?php } ?>
 
 </aside>
 <!-- /sidebar -->
