@@ -2,7 +2,7 @@
 
 	<main class="row">
 		<!-- section -->
-		<section role="main" class="medium-8 medium-offset-2 columns">
+		<section role="main" class="medium-7 medium-offset-2 columns">
 
 			<h1><?php _e( 'Tag Archive: ', 'titeblog' ); echo single_tag_title('', false); ?></h1>
 

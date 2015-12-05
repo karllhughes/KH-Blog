@@ -2,7 +2,7 @@
 
 	<main class="row">
 		<!-- section -->
-		<section role="main" class="medium-8 medium-offset-2 columns">
+		<section role="main" class="medium-7 medium-offset-2 columns">
 
 		<?php if (have_posts()): the_post(); ?>
 

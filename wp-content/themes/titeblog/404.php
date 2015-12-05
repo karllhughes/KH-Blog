@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 
-	<main role="main" class="row">
+	<main class="row">
 		<!-- section -->
-		<section class="medium-8 medium-offset-2 columns">
+		<section role="main" class="medium-7 medium-offset-2 columns">
 
 			<!-- article -->
 			<article id="post-404">
