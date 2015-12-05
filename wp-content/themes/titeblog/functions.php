@@ -101,6 +101,9 @@ function titeblog_page_title()
 function titeblog_header_scripts()
 {
     if ($GLOBALS['pagenow'] != 'wp-login.php' && !is_admin()) {
+		// Remove Emoji scripts
+		remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+		remove_action( 'wp_print_styles', 'print_emoji_styles' );
 		// Register scripts if necessary
         // wp_register_script('titeblogscripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '1.0.0');
         // wp_enqueue_script('titeblogscripts');
