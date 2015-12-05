@@ -29,8 +29,8 @@
 		<div class="wrapper">
 
 			<!-- header -->
-			<header class="header clear" role="banner">
-
+			<header class="header clear row" role="banner">
+				<div class="medium-4 columns">
 					<!-- logo -->
 					<div class="logo">
 						<a href="<?php echo home_url(); ?>">
@@ -41,12 +41,15 @@
 						<?php bloginfo('description'); ?>
 					</div>
 					<!-- /logo -->
+				</div>
 
+				<div class="medium-8 columns">
 					<!-- nav -->
 					<nav class="nav" role="navigation">
 						<?php titeblog_nav(); ?>
 					</nav>
 					<!-- /nav -->
+				</div>
 
 			</header>
 			<!-- /header -->
