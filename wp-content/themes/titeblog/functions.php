@@ -6,12 +6,6 @@
  */
 
 /*------------------------------------*\
-	External Modules/Files
-\*------------------------------------*/
-
-// Load any external files you have here
-
-/*------------------------------------*\
 	Theme Support
 \*------------------------------------*/
 
@@ -85,6 +79,20 @@ function titeblog_nav()
 		'walker'          => ''
 		)
 	);
+}
+
+// Distplays the header title content
+function titeblog_page_title()
+{
+	if (wp_title('', false)) { 
+		wp_title('');
+		echo ' | ';
+		bloginfo('name');
+	}  else {
+		bloginfo('name');
+		echo ' | '; 
+		bloginfo('description');
+	}
 }
 
 // Load HTML5 Blank scripts (header.php)
@@ -445,5 +453,3 @@ function html5_shortcode_demo_2($atts, $content = null) // Demo Heading H2 short
 {
     return '<h2>' . $content . '</h2>';
 }
-
-?>
