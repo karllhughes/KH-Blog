@@ -32,10 +32,16 @@ header.row, main.row, aside.sidebar {
     margin-bottom: 1em;
 }
 
+/* Typography */
 h1.understated {
     font-size: 1.125rem;
     line-height: 1.4;
     color: $aluminum;
+}
+
+.date {
+    color: $aluminum;
+    font-size: 1rem;
 }
 
 /* Pagination */
