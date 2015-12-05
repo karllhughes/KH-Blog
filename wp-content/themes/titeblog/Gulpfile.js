@@ -2,12 +2,13 @@
 
 var gulp = require('gulp');
 var sass = require('gulp-sass');
-var concat = require('gulp-concat');
+var minifyCss = require('gulp-minify-css');
 
 // 'styles' task to compile SCSS files
 gulp.task('styles', function() {
     gulp.src('./sass/**/*.scss')
         .pipe(sass().on('error', sass.logError))
+        .pipe(minifyCss({compatibility: 'ie8'}))
         .pipe(gulp.dest('./'));
 });
 
