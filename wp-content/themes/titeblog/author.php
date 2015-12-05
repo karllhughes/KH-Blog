@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 
-	<main role="main">
+	<main class="row">
 		<!-- section -->
-		<section>
+		<section role="main" class="medium-8 medium-offset-2 columns">
 
 		<?php if (have_posts()): the_post(); ?>
 
@@ -70,8 +70,8 @@
 
 		</section>
 		<!-- /section -->
-	</main>
 
-<?php get_sidebar(); ?>
+		<?php get_sidebar(); ?>
+	</main>
 
 <?php get_footer(); ?>

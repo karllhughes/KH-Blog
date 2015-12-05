@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 
-	<main role="main" class="row">
+	<main class="row">
 		<!-- section -->
-		<section class="medium-8 medium-offset-2 columns">
+		<section role="main" class="medium-8 medium-offset-2 columns">
 
 			<h1><?php _e( 'Latest Posts', 'titeblog' ); ?></h1>
 
@@ -12,8 +12,8 @@
 
 		</section>
 		<!-- /section -->
-	</main>
 
-<?php get_sidebar(); ?>
+		<?php get_sidebar(); ?>
+	</main>
 
 <?php get_footer(); ?>
