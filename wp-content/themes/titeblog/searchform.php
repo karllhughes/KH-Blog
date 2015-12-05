@@ -1,6 +1,12 @@
 <!-- search -->
 <form class="search" method="get" action="<?php echo home_url(); ?>" role="search">
-	<input class="search-input" type="search" name="s" placeholder="<?php _e( 'To search, type and hit enter.', 'titeblog' ); ?>">
-	<button class="search-submit" type="submit" role="button"><?php _e( 'Search', 'titeblog' ); ?></button>
+	<div class="row collapse postfix-round">
+        <div class="small-9 columns">
+          <input type="search" name="s" placeholder="<?php _e( 'Search', 'titeblog' ); ?>">
+        </div>
+        <div class="small-3 columns">
+          <button type="submit" role="button" class="button postfix"><?php _e( 'Go', 'titeblog' ); ?></button>
+        </div>
+    </div>
 </form>
 <!-- /search -->
