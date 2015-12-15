@@ -4,7 +4,7 @@
 		<!-- section -->
 		<section role="main" class="medium-7 medium-offset-2 columns">
 
-			<h1><?php _e( 'Tag Archive: ', 'titeblog' ); echo single_tag_title('', false); ?></h1>
+			<h1 class="understated"><?php _e( 'Tag Archive: ', 'titeblog' ); echo single_tag_title('', false); ?></h1>
 
 			<?php get_template_part('loop'); ?>
 

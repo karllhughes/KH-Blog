@@ -44,6 +44,10 @@ h1.understated {
     font-size: .875rem;
 }
 
+.tags p {
+    font-family: $font-family-sans-serif;
+}
+
 /* Pagination */
 ul.page-numbers {
     @extend .pagination;

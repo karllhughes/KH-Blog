@@ -4,7 +4,7 @@
 		<!-- section -->
 		<section role="main" class="medium-7 medium-offset-2 columns">
 
-			<h1><?php _e( 'Archives', 'titeblog' ); ?></h1>
+			<h1 class="understated"><?php _e( 'Archives', 'titeblog' ); ?></h1>
 
 			<?php get_template_part('loop'); ?>
 
