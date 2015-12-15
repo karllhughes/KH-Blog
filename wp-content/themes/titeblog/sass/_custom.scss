@@ -44,6 +44,14 @@ h1.understated {
     font-size: .875rem;
 }
 
+/* Single pages/posts */
+.tags p {
+    font-family: $font-family-sans-serif;
+}
+article.post iframe {
+    max-width:100%;
+}
+
 /* Pagination */
 ul.page-numbers {
     @extend .pagination;

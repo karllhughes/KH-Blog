@@ -4,7 +4,7 @@
 		<!-- section -->
 		<section role="main" class="medium-7 medium-offset-2 columns">
 
-			<h1><?php echo sprintf( __( '%s Search Results for ', 'titeblog' ), $wp_query->found_posts ); echo get_search_query(); ?></h1>
+			<h1 class="understated"><?php echo sprintf( __( '%s Search Results for ', 'titeblog' ), $wp_query->found_posts ); echo get_search_query(); ?></h1>
 
 			<?php get_template_part('loop'); ?>
 

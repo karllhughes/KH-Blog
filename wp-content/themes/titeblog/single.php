@@ -20,10 +20,11 @@
 			<!-- /post details -->
 
 			<?php the_content(); // Dynamic Content ?>
-
-			<?php the_tags( __( 'Tags: ', 'titeblog' ), ', ', '<br>'); // Separated by commas with a line break at the end ?>
-
-			<p><?php _e( 'Categorized in: ', 'titeblog' ); the_category(', '); // Separated by commas ?></p>
+			
+			<div class="tags">
+				<p><?php the_tags( __( 'Tags: ', 'titeblog' ), ', ', '<br>'); ?></p>
+				<p><?php _e( 'Categorized in: ', 'titeblog' ); the_category(', '); ?></p>
+			</div>
 
 			<?php comments_template(); ?>
 

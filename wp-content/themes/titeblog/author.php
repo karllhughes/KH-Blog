@@ -6,7 +6,7 @@
 
 		<?php if (have_posts()): the_post(); ?>
 
-			<h1><?php _e( 'Author Archives for ', 'titeblog' ); echo get_the_author(); ?></h1>
+			<h1 class="understated"><?php _e( 'Author Archives for ', 'titeblog' ); echo get_the_author(); ?></h1>
 
 		<?php if ( get_the_author_meta('description')) : ?>
 
