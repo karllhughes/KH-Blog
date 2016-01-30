@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e15f190d4011e40299f1daa90dbbaf85",
-    "content-hash": "1cbaadb81d4831f5dff1f5be3f4854f8",
+    "hash": "751794b3e15ef884172104e4474ca9fc",
+    "content-hash": "7c991b5aeabd043d60b1779369875703",
     "packages": [
         {
             "name": "composer/installers",
@@ -191,6 +191,34 @@
             "time": "2015-06-11 15:15:30"
         },
         {
+            "name": "karllhughes/titeblog-theme",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/karllhughes/titeblog-theme.git",
+                "reference": "56c73699dce1e5381338c1bd32df94a63d6cdeef"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/karllhughes/titeblog-theme/zipball/56c73699dce1e5381338c1bd32df94a63d6cdeef",
+                "reference": "56c73699dce1e5381338c1bd32df94a63d6cdeef",
+                "shasum": ""
+            },
+            "type": "wordpress-theme",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A Composer enabled HTML5 minimalist theme for Wordpress",
+            "keywords": [
+                "HTML5",
+                "karllhughes",
+                "theme",
+                "wordpress"
+            ],
+            "time": "2016-01-30 22:25:12"
+        },
+        {
             "name": "oscarotero/env",
             "version": "v1.0.1",
             "source": {
@@ -288,7 +316,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "php": 5
+        "php": 5,
+        "karllhughes/titeblog-theme": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

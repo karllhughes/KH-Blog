@@ -10,7 +10,7 @@
     "vlucas/phpdotenv": "^2.0.1",
     "johnpbloch/wordpress": "4.4.1",
     "oscarotero/env": "^1.0",
-    "karllhughes/titeblog-theme": "1.*"
+    "karllhughes/titeblog-theme": "dev-master"
   },
   "extra": {
     "installer-paths": {
