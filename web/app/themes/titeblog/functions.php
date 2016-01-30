@@ -337,7 +337,7 @@ function titeblogcomments($comment, $args, $depth)
 
 // Add Actions
 add_action('init', 'titeblog_header_scripts'); // Add Custom Scripts to wp_head
-add_action('wp_print_scripts', 'titeblog_conditional_scripts'); // Add Conditional Page Scripts
+// add_action('wp_print_scripts', 'titeblog_conditional_scripts'); // Add Conditional Page Scripts
 add_action('get_header', 'enable_threaded_comments'); // Enable Threaded Comments
 add_action('wp_enqueue_scripts', 'titeblog_styles'); // Add Theme Stylesheet
 add_action('init', 'register_html5_menu'); // Add HTML5 Blank Menu
