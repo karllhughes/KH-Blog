@@ -1,0 +1,11 @@
+{
+  "name": "kh-blog",
+  "version": "1.0.0",
+  "description": "Runs gulp tasks within the themes.",
+  "main": "index.php",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-shell": "^0.5.2"
+  }
+}
