@@ -9,8 +9,3 @@ gulp.task('styles', shell.task([
   'cd '+themeDir+' && npm update',
   'cd '+themeDir+' && gulp styles'
 ]));
-
-gulp.task('watch', shell.task([
-  'cd '+themeDir+' && npm update',
-  'cd '+themeDir+' && gulp watch'
-]));
