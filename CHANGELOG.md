@@ -1,10 +1,11 @@
 # Changelog
 All Notable changes to this repo will be documented in this file
 
-## 3.0.0 - 2015-01-31
+## 3.0.0 - 2015-01-30
 
 ### Added
 - Move to Bedrock boilerplate
+- Moved theme to its own repo, include it via Composer
 
 ### Deprecated
 - Nothing
