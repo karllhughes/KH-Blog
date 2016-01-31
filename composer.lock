@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "751794b3e15ef884172104e4474ca9fc",
-    "content-hash": "7c991b5aeabd043d60b1779369875703",
+    "hash": "0c5436b188557107e7e22dc5de1ed495",
+    "content-hash": "345278791bb85ef871e132cb17dc6e05",
     "packages": [
         {
             "name": "composer/installers",
@@ -196,12 +196,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/karllhughes/titeblog-theme.git",
-                "reference": "0b933e35e3f66260fe9d19ba21f9351a521fba57"
+                "reference": "14c4e342d40befdc5dd9db891e9cf78b0a21c598"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/karllhughes/titeblog-theme/zipball/0b933e35e3f66260fe9d19ba21f9351a521fba57",
-                "reference": "0b933e35e3f66260fe9d19ba21f9351a521fba57",
+                "url": "https://api.github.com/repos/karllhughes/titeblog-theme/zipball/14c4e342d40befdc5dd9db891e9cf78b0a21c598",
+                "reference": "14c4e342d40befdc5dd9db891e9cf78b0a21c598",
                 "shasum": ""
             },
             "type": "wordpress-theme",
@@ -216,7 +216,7 @@
                 "theme",
                 "wordpress"
             ],
-            "time": "2016-01-30 23:54:39"
+            "time": "2016-01-31 01:26:00"
         },
         {
             "name": "oscarotero/env",
@@ -310,6 +310,27 @@
                 "environment"
             ],
             "time": "2015-12-29 15:10:30"
+        },
+        {
+            "name": "wpackagist-plugin/cloudflare-flexible-ssl",
+            "version": "dev-trunk",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/cloudflare-flexible-ssl/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/cloudflare-flexible-ssl.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/cloudflare-flexible-ssl/",
+            "time": "2015-08-11 15:28:10"
         }
     ],
     "packages-dev": [],
@@ -317,7 +338,8 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "php": 5,
-        "karllhughes/titeblog-theme": 20
+        "karllhughes/titeblog-theme": 20,
+        "wpackagist-plugin/cloudflare-flexible-ssl": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
