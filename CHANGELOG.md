@@ -1,6 +1,20 @@
 # Changelog
 All Notable changes to this repo will be documented in this file
 
+## 3.0.1 - 2015-01-31
+
+### Added
+- Nothing
+
+### Deprecated
+- Nothing
+
+### Fixed
+- Updates to Readme.md file
+
+### Security
+- Including Cloudflare's HTTPS plugin via Composer
+
 ## 3.0.0 - 2015-01-30
 
 ### Added
