@@ -4,13 +4,23 @@
   "keywords": ["wordpress", "blog", "karllhughes"],
   "license": "MIT",
   "type": "project",
+  "config": {
+    "preferred-install": "dist"
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "http://wpackagist.org"
+    }
+  ],
   "require": {
     "php": "~7.0.0RC6",
     "composer/installers": "~1.0.12",
     "vlucas/phpdotenv": "^2.0.1",
     "johnpbloch/wordpress": "4.4.1",
     "oscarotero/env": "^1.0",
-    "karllhughes/titeblog-theme": "dev-master"
+    "karllhughes/titeblog-theme": "dev-master",
+    "wpackagist-plugin/cloudflare-flexible-ssl": "dev-trunk"
   },
   "extra": {
     "installer-paths": {
