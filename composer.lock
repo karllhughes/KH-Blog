@@ -196,12 +196,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/karllhughes/titeblog-theme.git",
-                "reference": "56c73699dce1e5381338c1bd32df94a63d6cdeef"
+                "reference": "0b933e35e3f66260fe9d19ba21f9351a521fba57"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/karllhughes/titeblog-theme/zipball/56c73699dce1e5381338c1bd32df94a63d6cdeef",
-                "reference": "56c73699dce1e5381338c1bd32df94a63d6cdeef",
+                "url": "https://api.github.com/repos/karllhughes/titeblog-theme/zipball/0b933e35e3f66260fe9d19ba21f9351a521fba57",
+                "reference": "0b933e35e3f66260fe9d19ba21f9351a521fba57",
                 "shasum": ""
             },
             "type": "wordpress-theme",
@@ -216,7 +216,7 @@
                 "theme",
                 "wordpress"
             ],
-            "time": "2016-01-30 22:25:12"
+            "time": "2016-01-30 23:54:39"
         },
         {
             "name": "oscarotero/env",
