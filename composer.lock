@@ -196,12 +196,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/karllhughes/titeblog-theme.git",
-                "reference": "14c4e342d40befdc5dd9db891e9cf78b0a21c598"
+                "reference": "3d3d644de358f5c492a6f4879e4854b1c15ffcd2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/karllhughes/titeblog-theme/zipball/14c4e342d40befdc5dd9db891e9cf78b0a21c598",
-                "reference": "14c4e342d40befdc5dd9db891e9cf78b0a21c598",
+                "url": "https://api.github.com/repos/karllhughes/titeblog-theme/zipball/3d3d644de358f5c492a6f4879e4854b1c15ffcd2",
+                "reference": "3d3d644de358f5c492a6f4879e4854b1c15ffcd2",
                 "shasum": ""
             },
             "type": "wordpress-theme",
@@ -216,7 +216,7 @@
                 "theme",
                 "wordpress"
             ],
-            "time": "2016-01-31 01:26:00"
+            "time": "2016-03-29 01:33:35"
         },
         {
             "name": "oscarotero/env",
@@ -316,7 +316,7 @@
             "version": "dev-trunk",
             "source": {
                 "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/cloudflare-flexible-ssl/",
+                "url": "https://plugins.svn.wordpress.org/cloudflare-flexible-ssl/",
                 "reference": "trunk"
             },
             "dist": {
