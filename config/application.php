@@ -44,10 +44,20 @@ define('WP_CONTENT_URL', WP_HOME . CONTENT_DIR);
 /**
  * DB settings
  */
-define('DB_NAME', env('DB_NAME'));
-define('DB_USER', env('DB_USER'));
-define('DB_PASSWORD', env('DB_PASSWORD'));
-define('DB_HOST', env('DB_HOST') ?: 'localhost');
+if (null !== env("CLEARDB_DATABASE_URL")) {
+    // Use ClearDB database connection
+    $url = parse_url(env("CLEARDB_DATABASE_URL"));
+    define('DB_HOST', $url["host"]);
+    define('DB_NAME', substr($url["path"], 1));
+    define('DB_USER', $url["user"]);
+    define('DB_PASSWORD', $url["pass"]);
+} else {
+    // Use standard MySQL database
+    define('DB_HOST', env('DB_HOST') ?: 'localhost');
+    define('DB_NAME', env('DB_NAME'));
+    define('DB_USER', env('DB_USER'));
+    define('DB_PASSWORD', env('DB_PASSWORD'));
+}
 define('DB_CHARSET', 'utf8mb4');
 define('DB_COLLATE', '');
 $table_prefix = env('DB_PREFIX') ?: 'wp_';
